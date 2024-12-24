@@ -39,9 +39,10 @@
       animation: gradientAnimation 10s ease infinite;
       transition: background 0.5s, color 0.5s;
       height: 100vh;
-      overflow: hidden;
+      overflow: auto;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
       text-align: center;
     }
@@ -53,8 +54,8 @@
     }
 
     .content {
-      z-index: 10;
-      position: relative;
+      padding: 50px 20px;
+      max-width: 800px;
       animation: fadeIn 1.5s ease;
     }
 
@@ -76,27 +77,6 @@
     h1 {
       font-size: 3rem;
       margin: 20px 0;
-      color: var(--text-color);
-    }
-
-    .animated-text {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      color: var(--text-color);
-      animation: typing 3s steps(30, end), blink 0.5s step-end infinite alternate;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 2px solid var(--text-color);
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    @keyframes blink {
-      from { border-color: transparent; }
-      to { border-color: var(--text-color); }
     }
 
     .linkedin {
@@ -108,13 +88,13 @@
       border-radius: 50px;
       font-size: 1.1rem;
       font-weight: bold;
+      margin-top: 20px;
       transition: background 0.3s ease, transform 0.3s ease;
     }
 
     .linkedin img {
       width: 24px;
       margin-right: 10px;
-      vertical-align: middle;
     }
 
     .linkedin:hover {
@@ -122,77 +102,72 @@
       transform: scale(1.1);
     }
 
-    .dark-mode-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: var(--button-bg);
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.5s ease, transform 0.3s ease;
-      z-index: 20;
+    .about-section {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      color: var(--text-color);
     }
 
-    .dark-mode-toggle:hover {
-      background: var(--button-hover-bg);
-      transform: scale(1.1);
+    .about-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
 
     footer {
-      margin-top: 20px;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
       font-size: 0.9rem;
       color: var(--text-color);
     }
 
-    /* Particle Background */
-    .particles {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 0;
+    .dark-mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--text-color);
+      z-index: 20;
+      transition: transform 0.3s ease, color 0.5s ease;
     }
 
-    .particle {
-      position: absolute;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 50%;
-      pointer-events: none;
-      animation: particleAnimation 10s linear infinite;
-    }
-
-    @keyframes particleAnimation {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-200vh) scale(0.5);
-        opacity: 0;
-      }
+    .dark-mode-toggle:hover {
+      transform: scale(1.2);
     }
   </style>
 </head>
 <body>
-  <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  <div class="particles"></div>
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
   <div class="content">
     <div class="logo">
       <img src="logo.png" alt="Free Time Ventures Logo">
     </div>
     <h1>Coming Soon</h1>
-    <p class="animated-text">Unlocking value in health and free time.</p>
     <a class="linkedin" href="https://www.linkedin.com/company/freetimeventures/posts/?feedView=all" target="_blank">
       <img src="linkedin-logo.png" alt="LinkedIn Logo"> LinkedIn
     </a>
-    <footer>Free Time Ventures © 2024</footer>
+    <div class="about-section">
+      <h2>About Free Time Ventures</h2>
+      <p>
+        Free Time Ventures is dedicated to building innovative technology products for health and productivity. 
+        We specialize in partnering with engineers to build transformative tech businesses, while also focusing 
+        on go-to-market strategies, distribution, and impactful marketing efforts.
+      </p>
+    </div>
   </div>
+  <footer>Free Time Ventures © 2024</footer>
 
   <script>
     // Toggle Dark Mode
@@ -202,23 +177,8 @@
       document.body.setAttribute('data-theme', newTheme);
     }
 
-    // Set Default Theme to Light
+    // Set Default Theme
     document.body.setAttribute('data-theme', 'light');
-
-    // Generate Particle Effects
-    const particleContainer = document.querySelector('.particles');
-    const particleCount = 50;
-
-    for (let i = 0; i < particleCount; i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
-      particle.style.width = `${Math.random() * 10 + 5}px`;
-      particle.style.height = `${Math.random() * 10 + 5}px`;
-      particle.style.left = `${Math.random() * 100}%`;
-      particle.style.top = `${Math.random() * 100 + 100}vh`;
-      particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
-      particleContainer.appendChild(particle);
-    }
   </script>
 </body>
 </html>
