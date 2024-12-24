@@ -9,7 +9,6 @@
 :root {
   --bg-gradient: linear-gradient(135deg, #FFDEE9, #B5FFFC);
   --text-color: #333;
-  --about-bg: rgba(255, 255, 255, 0.8);
   --linkedin-bg: #0077b5;
   --linkedin-hover: #005983;
 }
@@ -17,7 +16,6 @@
 [data-theme="dark"] {
   --bg-gradient: linear-gradient(135deg, #1e1e1e, #121212);
   --text-color: #f0f0f0;
-  --about-bg: rgba(30, 30, 30, 0.8);
   --linkedin-bg: #1e88e5;
   --linkedin-hover: #0d47a1;
 }
@@ -26,75 +24,115 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: var(--bg-gradient);
   color: var(--text-color);
+  overflow-x: hidden;
+  transition: background 0.5s, color 0.5s;
   height: 100vh;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+header {
   text-align: center;
-  transition: background 0.5s ease, color 0.5s ease;
+  padding: 50px 20px;
+  animation: fadeInDown 1.5s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .logo img {
-  width: 150px;
+  width: 120px;
+  margin-bottom: 20px;
   animation: float 4s ease-in-out infinite;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 h1 {
   font-size: 3rem;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .linkedin {
   display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
   text-decoration: none;
-  background-color: var(--linkedin-bg);
   color: #fff;
-  padding: 15px 20px;
+  background: var(--linkedin-bg);
   border-radius: 50px;
   font-size: 1.1rem;
   font-weight: bold;
-  margin-top: 20px;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .linkedin img {
-  width: 24px;
+  width: 20px;
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 .linkedin:hover {
-  background-color: var(--linkedin-hover);
-  transform: scale(1.1);
+  background: var(--linkedin-hover);
+  transform: scale(1.05);
 }
 
-.about-section {
-  margin: 50px auto;
-  padding: 30px;
-  max-width: 80%;
-  background: var(--about-bg);
-  border-radius: 10px;
-  text-align: left;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+main {
+  text-align: center;
+  padding: 50px 20px;
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
-.about-section h2 {
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 2s ease;
+}
+
+.about h2 {
   font-size: 2rem;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.about-section p {
+.about p {
   font-size: 1.2rem;
   line-height: 1.6;
 }
 
 footer {
-  margin-top: 50px;
+  text-align: center;
+  padding: 10px 0;
   font-size: 0.9rem;
 }
 
@@ -107,7 +145,7 @@ footer {
   cursor: pointer;
   font-size: 1.5rem;
   color: var(--text-color);
-  z-index: 20;
+  z-index: 10;
   transition: transform 0.3s ease;
 }
 
