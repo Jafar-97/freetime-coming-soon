@@ -1,53 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Time Ventures</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Time Ventures</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
-  <button id="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
-
-  <header class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="Free Time Ventures Logo">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="founder.html">Meet the Founder</a></li>
-      </ul>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Free Time Ventures Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="founder.html">Meet the Founder</a></li>
+        </ul>
+        <div class="dark-mode-toggle">
+            <button id="darkModeButton">🌙</button>
+        </div>
     </nav>
-  </header>
 
-  <section id="home" class="hero">
-    <h1>Welcome to Free Time Ventures</h1>
-    <p>Unlocking value in health and productivity.</p>
-    <a class="linkedin" href="https://www.linkedin.com/company/freetimeventures/posts/?feedView=all" target="_blank">
-      <img src="linkedin-logo.png" alt="LinkedIn Logo"> Follow us on LinkedIn
-    </a>
-  </section>
+    <header class="hero">
+        <h1>Welcome to Free Time Ventures</h1>
+        <p>Unlocking value in health and productivity.</p>
+        <a href="https://www.linkedin.com/company/freetimeventures/posts/?feedView=all" target="_blank" class="btn-linkedin">
+            <img src="linkedin.png" alt="LinkedIn"> Follow us on LinkedIn
+        </a>
+    </header>
 
-  <section id="about" class="about">
-    <h2>About Free Time Ventures</h2>
-    <p>
-      Free Time Ventures is dedicated to building innovative technology products for health and productivity.
-      We specialize in partnering with engineers to create transformative businesses, focusing on go-to-market strategies,
-      distribution, and impactful marketing efforts.
-    </p>
-  </section>
+    <section id="about" class="about-section">
+        <h2>About Free Time Ventures</h2>
+        <p>Free Time Ventures is dedicated to building innovative technology products for health and productivity. We specialize in partnering with engineers to create transformative businesses, focusing on go-to-market strategies, distribution, and impactful marketing efforts.</p>
+    </section>
 
-  <footer>
-    <div class="footer-content">
-      <p>Free Time Ventures © 2024</p>
-      <a href="https://www.linkedin.com/company/freetimeventures/posts/?feedView=all" target="_blank">
-        <img src="linkedin-logo.png" alt="LinkedIn">
-      </a>
-    </div>
-  </footer>
-
-  <script src="scripts.js"></script>
+    <footer>
+        <p>&copy; 2024 Free Time Ventures</p>
+    </footer>
 </body>
 </html>
