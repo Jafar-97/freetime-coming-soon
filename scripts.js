@@ -1,9 +1,7 @@
-function showModal() {
-  const modal = document.getElementById('modal');
-  modal.classList.add('open');
-}
-
-function closeModal() {
-  const modal = document.getElementById('modal');
-  modal.classList.remove('open');
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  const navbar = document.querySelector('.navbar');
+  const footer = document.querySelector('footer');
+  navbar.classList.toggle('dark-mode');
+  footer.classList.toggle('dark-mode');
 }
