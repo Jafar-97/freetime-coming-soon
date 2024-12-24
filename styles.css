@@ -1,154 +1,155 @@
-/* Basic Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Light and Dark Mode Variables */
-:root {
-  --bg-gradient: linear-gradient(135deg, #FFDEE9, #B5FFFC);
-  --text-color: #333;
-  --linkedin-bg: #0077b5;
-  --linkedin-hover: #005983;
+/* Body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+  transition: all 0.3s ease;
 }
 
 [data-theme="dark"] {
-  --bg-gradient: linear-gradient(135deg, #1e1e1e, #121212);
-  --text-color: #f0f0f0;
-  --linkedin-bg: #1e88e5;
-  --linkedin-hover: #0d47a1;
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  color: #f0f0f0;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: var(--bg-gradient);
-  color: var(--text-color);
-  overflow-x: hidden;
-  transition: background 0.5s, color 0.5s;
-  height: 100vh;
+/* Navbar */
+.navbar {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-header {
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.1rem;
+}
+
+.navbar ul li a:hover {
+  color: #0077b5;
+}
+
+/* Hero Section */
+.hero {
   text-align: center;
-  padding: 50px 20px;
-  animation: fadeInDown 1.5s ease-in-out;
+  padding: 100px 20px;
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.logo img {
-  width: 120px;
-  margin-bottom: 20px;
-  animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-h1 {
+.hero h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 20px 0;
 }
 
 .linkedin {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 30px;
-  text-decoration: none;
+  background: #0077b5;
   color: #fff;
-  background: var(--linkedin-bg);
   border-radius: 50px;
+  text-decoration: none;
   font-size: 1.1rem;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.3s;
 }
 
 .linkedin img {
   width: 20px;
   margin-right: 10px;
-  vertical-align: middle;
 }
 
 .linkedin:hover {
-  background: var(--linkedin-hover);
-  transform: scale(1.05);
+  background: #005983;
 }
 
-main {
+/* About Section */
+.about {
   text-align: center;
   padding: 50px 20px;
-  animation: fadeInUp 1.5s ease-in-out;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Founder Section */
+.founder {
+  text-align: center;
+  padding: 50px 20px;
 }
 
-.about {
-  max-width: 800px;
-  margin: 0 auto;
+.founder button {
+  padding: 10px 20px;
+  background: #0077b5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.founder button:hover {
+  background: #005983;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  animation: fadeIn 2s ease;
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.about h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.modal.hidden {
+  display: none;
 }
 
-.about p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+.modal-content {
+  position: relative;
 }
 
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 10px 0;
-  font-size: 0.9rem;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 }
 
-.dark-mode-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: var(--text-color);
-  z-index: 10;
-  transition: transform 0.3s ease;
-}
-
-.dark-mode-toggle:hover {
-  transform: scale(1.2);
+footer .socials img {
+  width: 24px;
+  margin: 0 10px;
 }
