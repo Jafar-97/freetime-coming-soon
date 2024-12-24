@@ -1,20 +1,45 @@
-// Select the dark mode toggle button
-const darkModeToggle = document.getElementById("darkModeToggle");
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
 
-// Add event listener for dark mode toggle
-darkModeToggle.addEventListener("click", () => {
-    // Toggle the 'dark-mode' class on the body
-    document.body.classList.toggle("dark-mode");
+// Check for saved preference in localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    darkModeToggle.textContent = '☀️';
+}
 
-    // Save the user's preference to localStorage
-    const isDarkMode = document.body.classList.contains("dark-mode");
-    localStorage.setItem("darkMode", isDarkMode);
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        darkModeToggle.textContent = '☀️';
+    } else {
+        localStorage.setItem('theme', 'light');
+        darkModeToggle.textContent = '🌙';
+    }
 });
 
-// Load the user's dark mode preference on page load
-document.addEventListener("DOMContentLoaded", () => {
-    const savedDarkMode = localStorage.getItem("darkMode") === "true";
-    if (savedDarkMode) {
-        document.body.classList.add("dark-mode");
-    }
+// Smooth Scroll for Navigation Links
+const navLinks = document.querySelectorAll('.nav-links a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Form Validation Feedback
+const form = document.querySelector('form');
+form.addEventListener('submit', event => {
+    event.preventDefault(); // Prevent actual form submission
+    alert('Thank you for reaching out! We will get back to you soon.');
+    form.reset(); // Reset form fields
 });
