@@ -1,208 +1,22 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease, color 0.3s ease;
+/* Add animation for sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-h1, h2 {
-    color: #2c3e50;
-    margin: 10px 0;
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-p {
-    color: #34495e;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
+/* Active navigation link */
+.nav-links li a.active {
     color: #3498db;
-}
-
-/* Header */
-header {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.logo img {
-    width: 50px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-.nav-links li a {
-    color: #2c3e50;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
-    color: #e74c3c;
-}
-
-.dark-mode-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #2c3e50;
-    transition: color 0.3s ease;
-}
-
-.dark-mode-toggle:hover {
-    color: #e74c3c;
-}
-
-/* Hero Section */
-.hero-section {
-    background: linear-gradient(135deg, #3498db, #9b59b6);
-    color: #ffffff;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero-section h1 {
-    font-size: 2.5rem;
-}
-
-.hero-section p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.linkedin-button {
-    display: inline-block;
-    background-color: #0077b5;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.linkedin-button:hover {
-    background-color: #005582;
-}
-
-/* About Section */
-.about-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f7f9fb;
-}
-
-.about-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.about-section p {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #ecf0f1;
-}
-
-.contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form label {
-    font-weight: bold;
-    text-align: left;
-    color: #2c3e50;
-}
-
-form input, form textarea, form button {
-    padding: 10px;
-    border: 1px solid #bdc3c7;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-form button {
-    background-color: #3498db;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #2980b9;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #34495e;
-    color: #ffffff;
-    font-size: 0.9rem;
-}
-
-/* Dark Mode */
-body.dark-mode {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-}
-
-body.dark-mode h1, 
-body.dark-mode h2 {
-    color: #ecf0f1;
-}
-
-body.dark-mode p {
-    color: #bdc3c7;
-}
-
-body.dark-mode header {
-    background-color: #34495e;
-}
-
-body.dark-mode .dark-mode-toggle {
-    color: #ecf0f1;
-}
-
-body.dark-mode .linkedin-button {
-    background-color: #0077b5;
-}
-
-body.dark-mode .linkedin-button:hover {
-    background-color: #005582;
-}
-
-/* Smooth Transitions */
-* {
-    transition: all 0.3s ease;
+/* Smooth scroll styling */
+html {
+    scroll-behavior: smooth;
 }
