@@ -107,4 +107,12 @@ footer.dark-mode {
   margin-right: 10px;
 }
 
+/* About Section */
+.about {
+  text-align: center;
+  padding: 50px 20px;
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
+
 
