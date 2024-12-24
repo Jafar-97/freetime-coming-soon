@@ -1,12 +1,9 @@
-function toggleDarkMode() {
-  const theme = document.body.getAttribute('data-theme');
-  document.body.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
-}
-
 function showModal() {
-  document.getElementById('modal').classList.remove('hidden');
+  const modal = document.getElementById('modal');
+  modal.classList.add('open');
 }
 
 function closeModal() {
-  document.getElementById('modal').classList.add('hidden');
+  const modal = document.getElementById('modal');
+  modal.classList.remove('open');
 }
