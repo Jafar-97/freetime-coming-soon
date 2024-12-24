@@ -15,7 +15,7 @@ body.dark-mode {
   position: fixed;
   top: 15px;
   right: 15px;
-  font-size: 1.8rem;
+  font-size: 2rem;
   border: none;
   background: none;
   cursor: pointer;
@@ -26,21 +26,19 @@ body.dark-mode {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
-  background: #ffffff;
+  padding: 10px 30px;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar.dark-mode {
-  background: #333333;
+  height: 60px;
 }
 
 .navbar ul {
   display: flex;
   list-style: none;
+  margin: 0;
 }
 
 .navbar ul li {
@@ -49,8 +47,13 @@ body.dark-mode {
 
 .navbar ul li a {
   text-decoration: none;
-  color: inherit;
+  color: #ffffff;
   font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffe6e6;
 }
 
 /* Hero Section */
@@ -60,37 +63,13 @@ body.dark-mode {
   background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
 }
 
-/* Founder Page */
-.founder-page {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.founder-img {
-  width: 200px;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #ffffff;
-}
-
-footer.dark-mode {
-  background: #333333;
-}
-
-/* Fix LinkedIn Button */
+/* LinkedIn Button */
 .linkedin {
   display: inline-block;
   text-decoration: none;
   color: #ffffff;
   background-color: #0077b5;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 5px;
   font-size: 1rem;
   font-weight: bold;
@@ -102,8 +81,8 @@ footer.dark-mode {
 }
 
 .linkedin img {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   margin-right: 10px;
 }
 
@@ -115,4 +94,10 @@ footer.dark-mode {
   font-size: 1.2rem;
 }
 
-
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #ffffff;
+  border-top: 2px solid #e3e3e3;
+}
