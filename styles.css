@@ -83,3 +83,28 @@ footer {
 footer.dark-mode {
   background: #333333;
 }
+
+/* Fix LinkedIn Button */
+.linkedin {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #0077b5;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  margin: 20px auto;
+}
+
+.linkedin img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+
