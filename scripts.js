@@ -1,45 +1,73 @@
-// Dark Mode Toggle
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const body = document.body;
 
-// Check for saved preference in localStorage
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-    body.classList.add('dark-mode');
-    darkModeToggle.textContent = '☀️';
-}
-
-darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-        darkModeToggle.textContent = '☀️';
-    } else {
-        localStorage.setItem('theme', 'light');
-        darkModeToggle.textContent = '🌙';
-    }
-});
-
-// Smooth Scroll for Navigation Links
-const navLinks = document.querySelectorAll('.nav-links a');
-
-navLinks.forEach(link => {
-    link.addEventListener('click', event => {
-        event.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        }
+    // Dark Mode Toggle
+    darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
     });
-});
 
-// Form Validation Feedback
-const form = document.querySelector('form');
-form.addEventListener('submit', event => {
-    event.preventDefault(); // Prevent actual form submission
-    alert('Thank you for reaching out! We will get back to you soon.');
-    form.reset(); // Reset form fields
+    // Smooth Scrolling
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            target.scrollIntoView({
+                behavior: "smooth",
+            });
+        });
+    });
+
+    // Form Validation
+    const contactForm = document.querySelector("form");
+    contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill out all fields!");
+            return;
+        }
+
+        if (!validateEmail(email)) {
+            alert("Please enter a valid email address!");
+            return;
+        }
+
+        alert("Thank you for contacting us! We will get back to you shortly.");
+        contactForm.reset();
+    });
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    // Section Highlight on Scroll
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll(".nav-links li a");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (scrollY >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navItems.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+                link.classList.add("active");
+            }
+        });
+    });
 });
