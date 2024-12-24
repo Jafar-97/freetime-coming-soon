@@ -1,16 +1,23 @@
-/* Dark Mode */
+/* Global */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
 body.dark-mode {
-  background: #1e1e1e;
+  background: #121212;
   color: #ffffff;
 }
 
 #dark-mode-toggle {
   position: fixed;
-  top: 10px;
-  right: 10px;
-  background: none;
+  top: 15px;
+  right: 15px;
+  font-size: 1.8rem;
   border: none;
-  font-size: 1.5rem;
+  background: none;
   cursor: pointer;
 }
 
@@ -18,33 +25,52 @@ body.dark-mode {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  align-items: center;
+  padding: 15px 50px;
   background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar.dark-mode {
   background: #333333;
 }
 
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+}
+
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 50px;
+  padding: 60px 20px;
   background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
 }
 
-/* About Section */
-.about, .founder {
+/* Founder Page */
+.founder-page {
   text-align: center;
-  padding: 50px;
+  padding: 40px 20px;
 }
 
-/* Founder Section */
 .founder-img {
   width: 200px;
   height: auto;
   border-radius: 50%;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 /* Footer */
