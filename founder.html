@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meet the Founder</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Founder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png">
 </head>
 <body>
-  <button id="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    <header>
+        <nav class="navbar">
+            <img src="logo.png" alt="Company Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="founder.html" class="active">Meet the Founder</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="darkModeToggle">
+                <img src="crescent-icon.png" alt="Dark Mode Toggle">
+            </button>
+        </nav>
+    </header>
 
-  <header class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="Free Time Ventures Logo">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="founder.html">Meet the Founder</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main>
+        <section id="founder-section" class="section">
+            <h1>Meet Our Founder</h1>
+            <div class="founder-profile">
+                <img src="founder.jpg" alt="Founder Photo" class="founder-photo">
+                <div class="founder-info">
+                    <h2>John Doe</h2>
+                    <p>
+                        John Doe is the visionary behind our company. With over 20 years of experience in the tech industry,
+                        John has a passion for innovation, leadership, and delivering exceptional results.
+                    </p>
+                    <p>
+                        John's mission is to create solutions that not only meet but exceed customer expectations, 
+                        bringing creativity and professionalism into every project.
+                    </p>
+                    <a href="https://www.linkedin.com" target="_blank" class="btn">
+                        <img src="linkedin-logo.png" alt="LinkedIn Icon" class="linkedin-icon"> Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <section class="founder-page">
-    <img src="founder.jpg" alt="Founder Picture" class="founder-img">
-    <h2>About the Founder</h2>
-    <p>
-      The founder of Free Time Ventures is an accomplished engineer with a decade of experience at Microsoft,
-      where they contributed to transformative products like Teams, Outlook, and Office. Passionate about innovation,
-      they transitioned to pursuing their dream of building impactful ventures with a mission to unlock value in health and productivity.
-    </p>
-    <p>
-      With a history of success in software development, the founder's work includes top-rated mobile apps featured in
-      publications like TIME and Mashable, high-performing Shopify solutions, and widely acclaimed websites. Their academic
-      achievements include being a Gold Medalist and recipient of the prestigious GE Foundation Scholarship.
-    </p>
-  </section>
+    <footer id="contact" class="footer">
+        <p>&copy; 2024 Our Company. All rights reserved.</p>
+        <a href="https://www.linkedin.com" target="_blank">
+            <img src="linkedin-logo.png" alt="LinkedIn Logo" class="social-icon">
+        </a>
+    </footer>
 
-  <footer>
-    <div class="footer-content">
-      <p>Free Time Ventures © 2024</p>
-      <a href="https://www.linkedin.com/company/freetimeventures/posts/?feedView=all" target="_blank">
-        <img src="linkedin-logo.png" alt="LinkedIn">
-      </a>
-    </div>
-  </footer>
-
-  <script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
