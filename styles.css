@@ -1,103 +1,112 @@
-/* Global */
+/* styles.css */
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  transition: background 0.3s, color 0.3s;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+    color: #333;
 }
 
-body.dark-mode {
-  background: #121212;
-  color: #ffffff;
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-#dark-mode-toggle {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  font-size: 2rem;
-  border: none;
-  background: none;
-  cursor: pointer;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  background: linear-gradient(90deg, #ff7eb3, #ff758c);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 60px;
+.logo img {
+    height: 50px;
 }
 
-.navbar ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-.navbar ul li {
-  margin: 0 15px;
+.nav-links li {
+    display: inline-block;
 }
 
-.navbar ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 1rem;
-  transition: color 0.3s;
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
 }
 
-.navbar ul li a:hover {
-  color: #ffe6e6;
+.nav-links a:hover {
+    color: #0073b1; /* LinkedIn blue */
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+.hero-section {
+    text-align: center;
+    padding: 150px 20px 100px;
+    background: linear-gradient(to right, #8e9eab, #eef2f3);
+    color: #fff;
 }
 
-/* LinkedIn Button */
-.linkedin {
-  display: inline-block;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #0077b5;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 200px;
-  margin: 20px auto;
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #222;
 }
 
-.linkedin img {
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
-/* About Section */
-.about {
-  text-align: center;
-  padding: 50px 20px;
-  line-height: 1.8;
-  font-size: 1.2rem;
+.linkedin-button {
+    background-color: #0073b1;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-/* Footer */
+.linkedin-button:hover {
+    background-color: #005983;
+}
+
+.about-section {
+    padding: 100px 20px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
 footer {
-  text-align: center;
-  padding: 20px;
-  background: #ffffff;
-  border-top: 2px solid #e3e3e3;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
 }
