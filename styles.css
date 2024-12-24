@@ -1,59 +1,98 @@
-/* Add animation for sections */
-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-section.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Active navigation link */
-.nav-links li a.active {
-    color: #3498db;
-    font-weight: bold;
-}
-
-/* Smooth scroll styling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Font Settings */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
-
+/* Gradient Background */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    background: linear-gradient(120deg, #89CFF0, #FFB6C1);
     color: #333;
+    transition: background 0.3s, color 0.3s;
 }
 
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #222;
-    font-weight: 600;
+/* Navigation */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Navigation Bar Fonts */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
 .nav-links a {
+    text-decoration: none;
+    color: #333;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    color: #555;
-    text-transform: capitalize;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #0077b6;
+    color: #FF6347;
 }
 
-/* Button Fonts */
-button, .linkedin-button {
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
+.linkedin-button {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.linkedin-button:hover {
+    background: #005f8c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(120deg, #121212, #333333);
+    color: #ddd;
+}
+
+body.dark-mode header nav {
+    background: rgba(18, 18, 18, 0.8);
+}
+
+body.dark-mode .linkedin-button {
+    background: #444;
+}
