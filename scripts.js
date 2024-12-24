@@ -1,9 +1,21 @@
-document.getElementById('darkModeToggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
+document.addEventListener("DOMContentLoaded", () => {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const body = document.body;
 
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    document.getElementById('formResponse').innerText = 'Thank you for reaching out!';
-    document.getElementById('contactForm').reset();
+    // Toggle Dark Mode
+    darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        darkModeToggle.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+
+    // Smooth Scroll
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = e.target.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: "smooth" });
+        });
+    });
 });
