@@ -3,42 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet the Founder - Free Time Ventures</title>
+    <title>Meet the Founder</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png" type="image/png">
-    <script defer src="scripts.js"></script>
 </head>
 <body>
-    <header>
+    <header class="navbar">
+        <img src="logo.png" alt="Logo" class="logo">
         <nav>
-            <div class="logo">
-                <img src="logo.png" alt="Free Time Ventures Logo">
-            </div>
-            <ul class="nav-links">
+            <ul>
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#about">About Us</a></li>
-                <li><a href="founder.html">Meet the Founder</a></li>
+                <li><a href="#founder">Meet the Founder</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
-            <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
         </nav>
+        <button id="darkModeToggle">🌙</button>
     </header>
 
-    <main class="founder-section">
-        <h1>About the Founder</h1>
-        <div class="founder-details">
-            <img src="founder.jpg" alt="Founder Photo" class="founder-photo">
-            <p>
-                The founder of Free Time Ventures is a visionary leader with a decade of experience at Microsoft. They have contributed to transformative products such as Teams, Outlook, and Office. Driven by a passion for innovation, they have transitioned to building impactful ventures that unlock value in health and productivity.
-            </p>
-            <p>
-                A recipient of prestigious awards like the GE Foundation Scholarship, the founder's journey includes creating top-rated mobile apps featured in TIME and Mashable, as well as developing high-performing Shopify solutions. Their work reflects a blend of technical expertise, creativity, and a commitment to community development.
-            </p>
-        </div>
-    </main>
+    <section id="founder" class="section">
+        <h2>Meet the Founder</h2>
+        <img src="founder.jpg" alt="Founder" class="founder-photo">
+        <p>The founder of Free Time Ventures is a visionary leader with a decade of experience at Microsoft...</p>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Free Time Ventures</p>
-    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
