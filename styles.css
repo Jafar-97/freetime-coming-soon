@@ -185,6 +185,79 @@ body {
     text-decoration: none;
 }
 
+/* Keyframes for "Coming Soon" Animation */
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowingText {
+    0%, 100% {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    }
+    50% {
+        text-shadow: 0 0 20px #FFC107, 0 0 40px #FFC107, 0 0 60px #FFC107;
+    }
+}
+
+/* Keyframes for Background Gradient Animation */
+@keyframes gradientBackground {
+    0% {
+        background: linear-gradient(135deg, #1A1A2E, #0F4C75);
+    }
+    50% {
+        background: linear-gradient(135deg, #0F4C75, #6A0572);
+    }
+    100% {
+        background: linear-gradient(135deg, #1A1A2E, #0F4C75);
+    }
+}
+
+/* Coming Soon Section */
+#coming-soon {
+    background: linear-gradient(135deg, #1A1A2E, #0F4C75); /* Navy to Teal */
+    animation: gradientBackground 10s infinite alternate; /* Dynamic gradient */
+    padding: 100px 20px;
+    text-align: center;
+    color: #FFD700; /* Gold */
+    border-top: 2px solid #FFD700; /* Thin gold border */
+    border-bottom: 2px solid #FFD700;
+}
+
+#coming-soon h2 {
+    font-size: 4rem; /* Larger font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #FFD700; /* Gold */
+    animation: fadeInFromTop 1.5s ease, glowingText 2s infinite ease-in-out; /* Glowing and fade-in */
+}
+
+#coming-soon p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    animation: slideInFromBottom 1.5s ease 0.5s; /* Delayed slide-in */
+    opacity: 0; /* Start hidden */
+    animation-fill-mode: forwards; /* Ensures the animation stays after completion */
+}
+
+
 .footer a:hover {
     text-decoration: underline;
 }
