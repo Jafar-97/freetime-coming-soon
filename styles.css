@@ -8,14 +8,17 @@
 
 /* Body */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1A1A2E, #0F4C75, #6A0572); /* Smooth Gradient */
+    animation: gradientBackground 10s infinite alternate;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
     background-size: 300% 300%;
-    animation: smoothGradient 10s infinite ease-in-out; /* Unified Gradient Animation */
-    color: #EEEEEE; /* Light Text */
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF; /* Default text color */
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 50% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 /* Navbar */
