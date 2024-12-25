@@ -143,102 +143,42 @@ body {
     }
 }
 
-@keyframes slideInFromBottom {
+/* Smooth Gradient Transition with Faster Timing */
+@keyframes smoothGradient {
     0% {
-        opacity: 0;
-        transform: translateY(50px);
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        background-position: 0% 50%;
     }
 }
 
-/* About Us Section */
-#about {
-    background: linear-gradient(135deg, #0F4C75, #6A0572); /* Teal to Purple */
-    padding: 80px 20px;
+#coming-soon {
+    background: linear-gradient(135deg, #1A1A2E, #0F4C75, #6A0572);
+    background-size: 300% 300%;
+    animation: smoothGradient 10s infinite ease-in-out; /* Reduced duration to 10s */
+    padding: 100px 20px;
     text-align: center;
-    color: #EEEEEE; /* Light Text */
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
     color: #FFD700; /* Gold */
-    margin-bottom: 20px;
+    border-top: 2px solid #FFD700; /* Thin Gold Border */
+    border-bottom: 2px solid #FFD700;
 }
 
-#about p {
-    font-size: 1.2rem;
+#coming-soon h2 {
+    font-size: 4rem; /* Larger Font Size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #FFD700; /* Gold */
+    animation: fadeInFromTop 1.5s ease, glowingText 2s infinite ease-in-out; /* Glowing and Fade-in */
+}
+
+#coming-soon p {
+    font-size: 1.5rem;
     line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #CCCCCC; /* Softer White Text */
-}
-
-/* Contact Section */
-#contact {
-    background: linear-gradient(135deg, #1A1A2E, #6A0572); /* Navy to Purple */
-    padding: 80px 20px;
-    text-align: center;
-    color: #EEEEEE;
-}
-
-#contact h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #FFD700; /* Gold */
-    margin-bottom: 20px;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #FFD700; /* Gold Border */
-    border-radius: 5px;
-    font-size: 1rem;
-    background: #1A1A2E; /* Navy Background */
-    color: #EEEEEE; /* Light Text */
-}
-
-.contact-form button {
-    padding: 12px 30px;
-    background: #FFD700; /* Gold Button */
-    color: #1A1A2E; /* Dark Text */
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background: #FFC107; /* Slightly Lighter Gold */
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: #0F4C75; /* Teal */
-    color: #FFD700; /* Gold Text */
-}
-
-.footer a {
-    color: #FFD700;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
+    animation: slideInFromBottom 1.5s ease 0.5s; /* Delayed Slide-in */
+    opacity: 0; /* Start Hidden */
+    animation-fill-mode: forwards; /* Ensures the animation stays after completion */
 }
