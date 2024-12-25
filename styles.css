@@ -218,22 +218,29 @@ body {
 }
 
 /* Keyframes for Background Gradient Animation */
+/* Keyframes for Smooth Gradient Transition */
 @keyframes gradientBackground {
     0% {
         background: linear-gradient(135deg, #1A1A2E, #0F4C75);
     }
-    50% {
+    25% {
         background: linear-gradient(135deg, #0F4C75, #6A0572);
     }
-    100% {
+    50% {
+        background: linear-gradient(135deg, #6A0572, #1A1A2E);
+    }
+    75% {
         background: linear-gradient(135deg, #1A1A2E, #0F4C75);
+    }
+    100% {
+        background: linear-gradient(135deg, #0F4C75, #6A0572);
     }
 }
 
-/* Coming Soon Section */
+/* Coming Soon Section with Refined Animation */
 #coming-soon {
-    background: linear-gradient(135deg, #1A1A2E, #0F4C75); /* Navy to Teal */
-    animation: gradientBackground 10s infinite alternate; /* Dynamic gradient */
+    background: linear-gradient(135deg, #1A1A2E, #0F4C75); /* Initial Gradient */
+    animation: gradientBackground 20s infinite alternate ease-in-out; /* Smooth transition with 20s duration */
     padding: 100px 20px;
     text-align: center;
     color: #FFD700; /* Gold */
@@ -255,9 +262,4 @@ body {
     animation: slideInFromBottom 1.5s ease 0.5s; /* Delayed slide-in */
     opacity: 0; /* Start hidden */
     animation-fill-mode: forwards; /* Ensures the animation stays after completion */
-}
-
-
-.footer a:hover {
-    text-decoration: underline;
 }
