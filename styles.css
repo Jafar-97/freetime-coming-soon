@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #000; /* Black background */
-    color: #FFD700; /* Gold text */
+    background: #1A1A2E; /* Dark navy background */
+    color: #EEEEEE; /* Light text */
     line-height: 1.6;
 }
 
@@ -17,12 +17,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #111; /* Slightly lighter black */
+    background: #0F4C75; /* Teal */
     padding: 15px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .logo {
@@ -37,22 +34,22 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #FFD700; /* Gold text */
+    color: #FFD700; /* Gold */
     font-weight: 500;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #FFF; /* White on hover */
+    color: #FFFFFF; /* White on hover */
 }
 
 /* Hero Section */
 #hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(135deg, #111, #222); /* Sleek gradient */
-    color: #FFD700; /* Gold text */
+    background: linear-gradient(135deg, #1A1A2E, #0F4C75); /* Dark to teal gradient */
+    color: #EEEEEE;
 }
 
 #hero h1 {
@@ -69,7 +66,7 @@ body {
 #hero .btn {
     padding: 12px 30px;
     background-color: #FFD700; /* Gold button */
-    color: #000; /* Black text */
+    color: #1A1A2E; /* Dark text */
     border-radius: 6px;
     font-size: 1rem;
     text-decoration: none;
@@ -83,39 +80,35 @@ body {
 
 /* Coming Soon Section */
 #coming-soon {
-    background: #000; /* Black background */
-    padding: 100px 20px;
+    background: linear-gradient(135deg, #0F4C75, #6A0572); /* Teal to Purple gradient */
+    padding: 80px 20px;
     text-align: center;
-    color: #FFD700; /* Gold text */
-    border-top: 2px solid #FFD700; /* Thin gold border */
-    border-bottom: 2px solid #FFD700;
+    color: #FFD700; /* Gold */
 }
 
 #coming-soon h2 {
-    font-size: 4rem; /* Bigger font size */
+    font-size: 3.5rem; /* Larger font size */
     font-weight: bold;
     margin-bottom: 20px;
-    text-transform: uppercase; /* Adds bold statement */
 }
 
 #coming-soon p {
     font-size: 1.5rem;
     line-height: 1.8;
-    color: #FFD700; /* Gold text */
 }
 
 /* About Us Section */
 #about {
-    background: #111; /* Slightly lighter black */
+    background: #1A1A2E; /* Deep navy */
     padding: 80px 20px;
     text-align: center;
-    color: #FFF; /* White text */
+    color: #EEEEEE; /* Light text */
 }
 
 #about h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #FFD700; /* Gold text */
+    color: #FFD700; /* Gold */
     margin-bottom: 20px;
 }
 
@@ -124,20 +117,21 @@ body {
     line-height: 1.8;
     max-width: 800px;
     margin: 0 auto;
-    color: #EEE; /* Softer white */
+    color: #CCCCCC; /* Softer light text */
 }
 
 /* Contact Section */
 #contact {
-    background: #000; /* Black background */
+    background: #0F4C75; /* Teal */
     padding: 80px 20px;
     text-align: center;
+    color: #EEEEEE;
 }
 
 #contact h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #FFD700; /* Gold text */
+    color: #FFD700; /* Gold */
     margin-bottom: 20px;
 }
 
@@ -155,14 +149,14 @@ body {
     border: 1px solid #FFD700; /* Gold border */
     border-radius: 5px;
     font-size: 1rem;
-    background: #111; /* Slightly lighter black */
-    color: #FFD700; /* Gold text */
+    background: #1A1A2E; /* Deep navy */
+    color: #EEEEEE; /* Light text */
 }
 
 .contact-form button {
     padding: 12px 30px;
     background: #FFD700; /* Gold button */
-    color: #000; /* Black text */
+    color: #1A1A2E; /* Dark text */
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -178,8 +172,8 @@ body {
 .footer {
     text-align: center;
     padding: 20px;
-    background: #111; /* Slightly lighter black */
-    color: #FFD700; /* Gold text */
+    background: #6A0572; /* Purple */
+    color: #FFD700; /* Gold */
 }
 
 .footer a {
