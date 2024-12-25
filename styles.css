@@ -373,3 +373,24 @@ body {
         opacity: 1;
     }
 }
+/* Our Products Section */
+#products {
+    padding: 80px 20px;
+    text-align: center;
+    color: #FFFFFF; /* White text */
+    background-color: #000000; /* Black background */
+}
+
+#products h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #FFFFFF; /* White text */
+}
+
+#products p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #CCCCCC; /* Softer white text */
+    margin-top: 10px;
+}
