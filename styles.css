@@ -60,6 +60,7 @@ body {
 #hero p {
     font-size: 1.2rem;
     color: #CCCCCC; /* Softer White Text */
+    margin-bottom: 20px; /* Add space below this text */
 }
 
 .btn {
@@ -70,6 +71,7 @@ body {
     cursor: pointer;
     background: none;
     transition: all 0.3s ease;
+    margin-top: 20px; /* Add space above the button */
 }
 
 .btn:hover {
