@@ -20,25 +20,16 @@ body {
 
 /* Navbar */
 .navbar {
-    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: sticky;
     top: 0;
-    width: 100%;
-    z-index: 100;
-    background: transparent;
-    padding: 10px 20px;
+    z-index: 1000;
+    background: transparent; /* Transparent to blend with the body */
+    animation: smoothGradient 10s infinite ease-in-out; /* Matches body animation */
 }
-
-#founder-header {
-    margin-top: 100px; /* Adjust to create the gap */
-    text-align: center;
-}
-
-#founder-header img {
-    margin-top: 20px;
-    border-radius: 50%;
-    border: 4px solid #FFD700; /* Gold border for the circular picture */
-}
-
 
 .navbar .logo {
     height: 50px;
@@ -51,9 +42,11 @@ body {
 }
 
 .nav-links a {
-    color: #FFD700; /* Gold color */
     text-decoration: none;
+    color: #FFD700; /* Gold Text */
     font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
