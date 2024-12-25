@@ -81,58 +81,27 @@ body {
     background-color: #FFC107; /* Slightly Lighter Gold */
 }
 
-/* Keyframes for Smooth Gradient Transition */
-@keyframes gradientBackground {
+/* Smooth Gradient Transition */
+@keyframes smoothGradient {
     0% {
-        background: linear-gradient(135deg, #1A1A2E, #0F4C75);
+        background-position: 0% 50%;
     }
     50% {
-        background: linear-gradient(135deg, #0F4C75, #6A0572);
+        background-position: 100% 50%;
     }
     100% {
-        background: linear-gradient(135deg, #6A0572, #1A1A2E);
-    }
-}
-
-/* Keyframes for Text Animation */
-@keyframes fadeInFromTop {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes glowingText {
-    0%, 100% {
-        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
-    }
-    50% {
-        text-shadow: 0 0 20px #FFC107, 0 0 40px #FFC107, 0 0 60px #FFC107;
+        background-position: 0% 50%;
     }
 }
 
 /* Coming Soon Section */
 #coming-soon {
-    background: linear-gradient(135deg, #1A1A2E, #0F4C75); /* Initial Gradient */
-    animation: gradientBackground 40s infinite alternate ease-in-out; /* Very slow transition */
+    background: linear-gradient(135deg, #1A1A2E, #0F4C75, #6A0572);
+    background-size: 300% 300%;
+    animation: smoothGradient 20s infinite ease-in-out; /* Smooth transition */
     padding: 100px 20px;
     text-align: center;
-    color: #FFD700; /* Gold Text */
+    color: #FFD700; /* Gold */
     border-top: 2px solid #FFD700; /* Thin Gold Border */
     border-bottom: 2px solid #FFD700;
 }
@@ -151,6 +120,38 @@ body {
     animation: slideInFromBottom 1.5s ease 0.5s; /* Delayed Slide-in */
     opacity: 0; /* Start Hidden */
     animation-fill-mode: forwards; /* Ensures the animation stays after completion */
+}
+
+/* Keyframes for Text Animation */
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowingText {
+    0%, 100% {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    }
+    50% {
+        text-shadow: 0 0 20px #FFC107, 0 0 40px #FFC107, 0 0 60px #FFC107;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* About Us Section */
