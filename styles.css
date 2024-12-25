@@ -23,34 +23,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: transparent; /* Transparent to blend with the body */
-    animation: smoothGradient 10s infinite ease-in-out; /* Matches body animation */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: transparent; /* Removed the box look */
 }
 
-.navbar .logo {
-    height: 50px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
 }
 
 .nav-links a {
+    color: #FFD700;
     text-decoration: none;
-    color: #FFD700; /* Gold Text */
     font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #FFFFFF; /* White on hover */
 }
 
 /* Smooth Gradient Transition */
