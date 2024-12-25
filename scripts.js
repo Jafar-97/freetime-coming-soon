@@ -36,3 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(section);
     });
 });
+
+document.getElementById('signup-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Thank you for subscribing! Stay tuned for updates.');
+});
+
