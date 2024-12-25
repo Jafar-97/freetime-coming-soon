@@ -3,28 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet the Founder</title>
+    <title>Meet the Founder - Free Time Ventures</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png">
 </head>
 <body>
-    <header class="navbar">
-        <img src="logo.png" alt="Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html#home">Home</a></li>
+    <header>
+        <nav class="navbar">
+            <img src="logo.png" alt="Company Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About Us</a></li>
-                <li><a href="#founder">Meet the Founder</a></li>
+                <li><a href="founder.html" class="active">Meet the Founder</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
+            <button id="darkModeToggle">
+                <img src="crescent-icon.png" alt="Toggle Dark Mode">
+            </button>
         </nav>
-        <button id="darkModeToggle">🌙</button>
     </header>
 
-    <section id="founder" class="section">
-        <h2>Meet the Founder</h2>
-        <img src="founder.jpg" alt="Founder" class="founder-photo">
-        <p>The founder of Free Time Ventures is a visionary leader with a decade of experience at Microsoft...</p>
-    </section>
+    <main>
+        <section id="founder-section" class="section">
+            <h1>Meet Our Founder</h1>
+            <div class="founder-profile">
+                <img src="founder.jpg" alt="Founder Photo" class="founder-photo">
+                <div class="founder-info">
+                    <h2>John Doe</h2>
+                    <p>
+                        John Doe is the visionary behind Free Time Ventures. With over 20 years of experience in the tech industry,
+                        he brings passion, innovation, and leadership to every project.
+                    </p>
+                    <a href="https://www.linkedin.com" target="_blank" class="btn">
+                        <img src="linkedin-logo.png" alt="LinkedIn Icon" class="linkedin-icon"> Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Free Time Ventures. All rights reserved.</p>
+        <a href="https://www.linkedin.com" target="_blank">
+            <img src="linkedin-logo.png" alt="LinkedIn Logo" class="social-icon">
+        </a>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
