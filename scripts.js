@@ -1,9 +1,13 @@
-document.getElementById('darkModeToggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById("darkModeToggle");
+
+darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
 });
 
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    document.getElementById('formResponse').innerText = 'Thank you for reaching out!';
-    document.getElementById('contactForm').reset();
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("dark-mode");
+    }
 });
