@@ -1,3 +1,5 @@
+
+
 /* General Reset */
 * {
     margin: 0;
@@ -10,7 +12,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #1A1A2E, #0F4C75, #6A0572); /* Smooth Gradient */
     background-size: 300% 300%;
-    animation: smoothGradient 8s infinite ease-in-out; /* Unified Gradient Animation */
+    animation: smoothGradient 10s infinite ease-in-out; /* Unified Gradient Animation */
     color: #EEEEEE; /* Light Text */
     line-height: 1.6;
     margin: 0;
@@ -27,6 +29,7 @@ body {
     top: 0;
     z-index: 1000;
     background: transparent; /* Transparent to blend with the body */
+    animation: smoothGradient 10s infinite ease-in-out; /* Matches body animation */
 }
 
 .navbar .logo {
@@ -64,6 +67,7 @@ body {
     }
 }
 
+
 /* Hero Section */
 #hero {
     text-align: center;
@@ -97,61 +101,17 @@ body {
     background-color: #FFC107; /* Slightly Lighter Gold */
 }
 
-/* About Us Section */
-#about {
-    padding: 80px 20px;
-    text-align: center;
-    color: #EEEEEE; /* Light Text */
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #FFD700; /* Gold */
-    margin-bottom: 20px;
-}
-
-#about p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #CCCCCC; /* Softer White Text */
-}
-
-/* Founder Section */
-#founder {
-    text-align: center;
-    padding: 40px;
-    color: #EEEEEE;
-    background: linear-gradient(120deg, #142850, #27496d); /* Smooth Gradient */
-}
-
-.circular-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 4px solid #FFD700;
-    display: block;
-    margin: 20px auto;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    color: #FFD700;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style-type: disc;
-    text-align: left;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-ul li {
-    margin-bottom: 10px;
-    line-height: 1.6;
+/* Keyframes for Smooth Gradient Transition */
+@keyframes smoothGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Coming Soon Section */
@@ -161,7 +121,6 @@ ul li {
     color: #FFD700; /* Gold */
     border-top: 2px solid #FFD700; /* Thin Gold Border */
     border-bottom: 2px solid #FFD700;
-    animation: fadeIn 2s ease-in-out;
 }
 
 #coming-soon h2 {
@@ -178,6 +137,119 @@ ul li {
     animation: slideInFromBottom 1.5s ease 0.5s; /* Delayed Slide-in */
     opacity: 0; /* Start Hidden */
     animation-fill-mode: forwards; /* Ensures the animation stays after completion */
+}
+
+/* Keyframes for Text Animation */
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowingText {
+    0%, 100% {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    }
+    50% {
+        text-shadow: 0 0 20px #FFC107, 0 0 40px #FFC107, 0 0 60px #FFC107;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Us Section */
+#about {
+    padding: 80px 20px;
+    text-align: center;
+    color: #EEEEEE; /* Light Text */
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFD700; /* Gold */
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+#about h2::after {
+    content: none;
+}
+
+
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #CCCCCC; /* Softer White Text */
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 20px;
+    text-align: center;
+    color: #EEEEEE;
+    border-top: 3px solid #FFD700; /* Add a gold border line above */
+    margin-top: 40px; /* Add spacing between About Us and Contact */
+}
+
+
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFD700; /* Gold */
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #FFD700; /* Gold Border */
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent Black */
+    color: #EEEEEE; /* Light Text */
+}
+
+.contact-form button {
+    padding: 12px 30px;
+    background: #FFD700; /* Gold Button */
+    color: #1A1A2E; /* Dark Text */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #FFC107; /* Slightly Lighter Gold */
 }
 
 /* Footer */
@@ -197,3 +269,51 @@ ul li {
 .footer a:hover {
     text-decoration: underline;
 }
+
+.circular-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #FFD700;
+    display: block;
+    margin: 20px auto;
+}
+
+#founder {
+    text-align: center;
+    padding: 40px;
+    color: #EEEEEE;
+    background: linear-gradient(120deg, #142850, #27496d);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+p, ul li {
+    font-size: 1rem;
+    color: #EEEEEE;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #142850;
+    color: #EEEEEE;
+}
+
+
