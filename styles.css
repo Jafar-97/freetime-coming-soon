@@ -10,6 +10,8 @@ body {
     background: #121212; /* Dark gray */
     color: #F4F4F9; /* Off-white */
     line-height: 1.6;
+    background: #000 !important;
+    color: #fff !important;
 }
 
 /* Navbar */
