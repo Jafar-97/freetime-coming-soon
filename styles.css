@@ -322,3 +322,24 @@ p, ul li {
     background: #142850;
     color: #EEEEEE;
 }
+
+#darkModeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.crescent-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+#darkModeToggle:hover .crescent-icon {
+    transform: scale(1.2);
+}
+
