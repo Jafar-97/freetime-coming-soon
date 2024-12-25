@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #1A1A2E; /* Dark navy background */
-    color: #EEEEEE; /* Light text */
+    background: #1A1A2E; /* Dark Navy */
+    color: #EEEEEE; /* Light Text */
     line-height: 1.6;
 }
 
@@ -17,9 +17,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #0F4C75; /* Teal */
+    background: linear-gradient(135deg, #0F4C75, #1A1A2E); /* Teal to Navy */
     padding: 15px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar .logo {
@@ -34,7 +37,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #FFD700; /* Gold */
+    color: #FFD700; /* Gold Text */
     font-weight: 500;
     font-size: 1rem;
     transition: color 0.3s ease;
@@ -48,8 +51,8 @@ body {
 #hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(135deg, #1A1A2E, #0F4C75); /* Dark to teal gradient */
-    color: #EEEEEE;
+    background: linear-gradient(135deg, #6A0572, #0F4C75); /* Purple to Teal */
+    color: #EEEEEE; /* Light Text */
 }
 
 #hero h1 {
@@ -65,8 +68,8 @@ body {
 
 #hero .btn {
     padding: 12px 30px;
-    background-color: #FFD700; /* Gold button */
-    color: #1A1A2E; /* Dark text */
+    background-color: #FFD700; /* Gold Button */
+    color: #1A1A2E; /* Dark Text */
     border-radius: 6px;
     font-size: 1rem;
     text-decoration: none;
@@ -75,19 +78,19 @@ body {
 }
 
 #hero .btn:hover {
-    background-color: #FFC107; /* Slightly lighter gold */
+    background-color: #FFC107; /* Slightly Lighter Gold */
 }
 
 /* Coming Soon Section */
 #coming-soon {
-    background: linear-gradient(135deg, #0F4C75, #6A0572); /* Teal to Purple gradient */
+    background: linear-gradient(135deg, #1A1A2E, #0F4C75); /* Navy to Teal */
     padding: 80px 20px;
     text-align: center;
-    color: #FFD700; /* Gold */
+    color: #FFD700; /* Gold Text */
 }
 
 #coming-soon h2 {
-    font-size: 3.5rem; /* Larger font size */
+    font-size: 3.5rem; /* Larger Font Size */
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -99,16 +102,16 @@ body {
 
 /* About Us Section */
 #about {
-    background: #1A1A2E; /* Deep navy */
+    background: linear-gradient(135deg, #0F4C75, #6A0572); /* Teal to Purple */
     padding: 80px 20px;
     text-align: center;
-    color: #EEEEEE; /* Light text */
+    color: #EEEEEE; /* Light Text */
 }
 
 #about h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #FFD700; /* Gold */
+    color: #FFD700; /* Gold Text */
     margin-bottom: 20px;
 }
 
@@ -117,12 +120,12 @@ body {
     line-height: 1.8;
     max-width: 800px;
     margin: 0 auto;
-    color: #CCCCCC; /* Softer light text */
+    color: #CCCCCC; /* Softer White Text */
 }
 
 /* Contact Section */
 #contact {
-    background: #0F4C75; /* Teal */
+    background: linear-gradient(135deg, #1A1A2E, #6A0572); /* Navy to Purple */
     padding: 80px 20px;
     text-align: center;
     color: #EEEEEE;
@@ -131,7 +134,7 @@ body {
 #contact h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #FFD700; /* Gold */
+    color: #FFD700; /* Gold Text */
     margin-bottom: 20px;
 }
 
@@ -146,17 +149,17 @@ body {
     width: 100%;
     padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #FFD700; /* Gold border */
+    border: 1px solid #FFD700; /* Gold Border */
     border-radius: 5px;
     font-size: 1rem;
-    background: #1A1A2E; /* Deep navy */
-    color: #EEEEEE; /* Light text */
+    background: #1A1A2E; /* Navy Background */
+    color: #EEEEEE; /* Light Text */
 }
 
 .contact-form button {
     padding: 12px 30px;
-    background: #FFD700; /* Gold button */
-    color: #1A1A2E; /* Dark text */
+    background: #FFD700; /* Gold Button */
+    color: #1A1A2E; /* Dark Text */
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -165,15 +168,15 @@ body {
 }
 
 .contact-form button:hover {
-    background: #FFC107; /* Slightly lighter gold */
+    background: #FFC107; /* Slightly Lighter Gold */
 }
 
 /* Footer */
 .footer {
     text-align: center;
     padding: 20px;
-    background: #6A0572; /* Purple */
-    color: #FFD700; /* Gold */
+    background: #0F4C75; /* Teal */
+    color: #FFD700; /* Gold Text */
 }
 
 .footer a {
