@@ -1,273 +1,43 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
+/* General Styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1A1A2E, #0F4C75, #6A0572); /* Smooth Gradient */
-    background-size: 300% 300%;
-    animation: smoothGradient 10s infinite ease-in-out; /* Unified Gradient Animation */
-    color: #EEEEEE; /* Light Text */
-    line-height: 1.6;
     margin: 0;
-    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #142850, #27496d);
+    color: #EEEEEE;
+    overflow-x: hidden;
+    transition: background 10s ease-in-out; /* Smooth background transition for the entire page */
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: transparent; /* Transparent to blend with the body */
-    animation: smoothGradient 10s infinite ease-in-out; /* Matches body animation */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: transparent; /* Removed box look */
+    box-shadow: none; /* Eliminates box shadow */
+    transition: background 1s ease-in-out;
 }
 
-.navbar .logo {
-    height: 50px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
 }
 
 .nav-links a {
+    color: #FFD700;
     text-decoration: none;
-    color: #FFD700; /* Gold Text */
     font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-    color: #FFFFFF; /* White on hover */
+    color: #FFFFFF;
 }
 
-/* Smooth Gradient Transition */
-@keyframes smoothGradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
-/* Hero Section */
-#hero {
-    text-align: center;
-    padding: 100px 20px;
-    color: #EEEEEE; /* Light Text */
-}
-
-#hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#hero p {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-}
-
-#hero .btn {
-    padding: 12px 30px;
-    background-color: #FFD700; /* Gold Button */
-    color: #1A1A2E; /* Dark Text */
-    border-radius: 6px;
-    font-size: 1rem;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-#hero .btn:hover {
-    background-color: #FFC107; /* Slightly Lighter Gold */
-}
-
-/* Keyframes for Smooth Gradient Transition */
-@keyframes smoothGradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Coming Soon Section */
-#coming-soon {
-    padding: 100px 20px;
-    text-align: center;
-    color: #FFD700; /* Gold */
-    border-top: 2px solid #FFD700; /* Thin Gold Border */
-    border-bottom: 2px solid #FFD700;
-}
-
-#coming-soon h2 {
-    font-size: 4rem; /* Larger Font Size */
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #FFD700; /* Gold */
-    animation: fadeInFromTop 1.5s ease, glowingText 2s infinite ease-in-out; /* Glowing and Fade-in */
-}
-
-#coming-soon p {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    animation: slideInFromBottom 1.5s ease 0.5s; /* Delayed Slide-in */
-    opacity: 0; /* Start Hidden */
-    animation-fill-mode: forwards; /* Ensures the animation stays after completion */
-}
-
-/* Keyframes for Text Animation */
-@keyframes fadeInFromTop {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes glowingText {
-    0%, 100% {
-        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
-    }
-    50% {
-        text-shadow: 0 0 20px #FFC107, 0 0 40px #FFC107, 0 0 60px #FFC107;
-    }
-}
-
-@keyframes slideInFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* About Us Section */
-#about {
-    padding: 80px 20px;
-    text-align: center;
-    color: #EEEEEE; /* Light Text */
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #FFD700; /* Gold */
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-}
-
-#about h2::after {
-    content: none;
-}
-
-
-}
-
-#about p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #CCCCCC; /* Softer White Text */
-}
-
-/* Contact Section */
-#contact {
-    padding: 80px 20px;
-    text-align: center;
-    color: #EEEEEE;
-    border-top: 3px solid #FFD700; /* Add a gold border line above */
-    margin-top: 40px; /* Add spacing between About Us and Contact */
-}
-
-
-#contact h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #FFD700; /* Gold */
-    margin-bottom: 20px;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #FFD700; /* Gold Border */
-    border-radius: 5px;
-    font-size: 1rem;
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent Black */
-    color: #EEEEEE; /* Light Text */
-}
-
-.contact-form button {
-    padding: 12px 30px;
-    background: #FFD700; /* Gold Button */
-    color: #1A1A2E; /* Dark Text */
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background: #FFC107; /* Slightly Lighter Gold */
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8); /* Transparent Black */
-    color: #FFD700; /* Gold Text */
-}
-
-.footer a {
-    color: #FFD700;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
+/* Circular Photo */
 .circular-photo {
     width: 200px;
     height: 200px;
@@ -277,17 +47,24 @@ body {
     margin: 20px auto;
 }
 
+/* Section Styling */
 #founder {
     text-align: center;
-    padding: 40px;
-    color: #EEEEEE;
-    background: linear-gradient(120deg, #142850, #27496d);
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .section-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #FFD700;
     margin-bottom: 20px;
+}
+
+#founder p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
 ul {
@@ -295,6 +72,7 @@ ul {
     text-align: left;
     margin: 20px auto;
     max-width: 800px;
+    padding-left: 20px;
 }
 
 ul li {
@@ -302,15 +80,48 @@ ul li {
     line-height: 1.6;
 }
 
-p, ul li {
-    font-size: 1rem;
-    color: #EEEEEE;
+/* Animations */
+.animate-fade-in {
+    animation: fadeIn 2s ease-in-out;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
 .footer {
     text-align: center;
     padding: 20px;
     background: #142850;
     color: #EEEEEE;
+    margin-top: 20px;
 }
 
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Additional Responsive Styling */
+@media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    ul {
+        padding-left: 10px;
+    }
+
+    .circular-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
