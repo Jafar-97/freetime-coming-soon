@@ -186,15 +186,9 @@ body {
 }
 
 #about h2::after {
-    content: '';
-    display: block;
-    width: 100px; /* Length of the line */
-    height: 3px; /* Thickness of the line */
-    background-color: #FFD700; /* Gold */
-    margin: 10px auto 0; /* Spacing around the line */
-    position: relative;
-    border-radius: 3px; /* Slight rounding for a smooth look */
+    content: none;
 }
+
 
 }
 
@@ -211,7 +205,10 @@ body {
     padding: 80px 20px;
     text-align: center;
     color: #EEEEEE;
+    border-top: 3px solid #FFD700; /* Add a gold border line above */
+    margin-top: 40px; /* Add spacing between About Us and Contact */
 }
+
 
 #contact h2 {
     font-size: 2.5rem;
