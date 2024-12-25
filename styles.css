@@ -394,3 +394,54 @@ body {
     color: #CCCCCC; /* Softer white text */
     margin-top: 10px;
 }
+
+/* Email Signup Section */
+#email-signup {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #000000; /* Black background for consistency */
+    color: #FFFFFF; /* White text */
+}
+
+#email-signup h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+#email-signup p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #CCCCCC; /* Slightly lighter text for readability */
+}
+
+.signup-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.signup-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.signup-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
