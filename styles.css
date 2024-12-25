@@ -213,3 +213,48 @@ body {
     display: block;
     filter: invert(100%); /* Ensure black-white match */
 }
+
+/* General Smooth Fade-in Effect for All Sections */
+.section {
+    opacity: 0; /* Start Hidden */
+    transform: translateY(50px); /* Start Slightly Below */
+    transition: all 0.6s ease-in-out;
+}
+
+.section.show {
+    opacity: 1; /* Fully Visible */
+    transform: translateY(0); /* Reset Position */
+}
+
+/* Glowing Effect for Coming Soon */
+#coming-soon h2 {
+    font-size: 4rem; /* Adjust as needed */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700; /* Initial Glow */
+    animation: glowingEffect 2s infinite ease-in-out; /* Repeating Glow */
+}
+
+@keyframes glowingEffect {
+    0%, 100% {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    }
+    50% {
+        text-shadow: 0 0 20px #FFC107, 0 0 40px #FFC107, 0 0 60px #FFC107;
+    }
+}
+
+/* Smooth Transition for the Whole Website */
+body {
+    animation: fadeInBody 1.2s ease-in-out; /* Fade-in effect for body */
+}
+
+@keyframes fadeInBody {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
