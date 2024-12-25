@@ -6,7 +6,7 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* Body Styling */
+/* Body */
 body {
     background: linear-gradient(120deg, #f3f4f6, #ffffff);
     color: #333;
@@ -19,118 +19,94 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Smooth Gradient */
-    padding: 15px 30px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    padding: 10px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .logo {
-    height: 40px; /* Smaller logo */
-    transition: transform 0.3s ease;
-}
-
-.navbar .logo:hover {
-    transform: scale(1.1); /* Slight hover effect */
+    height: 50px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
+    gap: 15px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links .active {
-    color: #ffeb3b; /* Accent color on hover */
+    color: #ffeb3b;
+}
+
+#darkModeToggle img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
 
 /* Hero Section */
 #hero {
     text-align: center;
-    padding: 80px 20px; /* Reduced padding */
-    background: linear-gradient(135deg, #4caf50, #ffffff); /* Subtle blend */
-    color: #333; /* Better contrast */
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #4caf50, #ffffff);
+    color: #333;
 }
 
 #hero h1 {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-    color: #333; /* Neutral text color */
-}
-
-#hero p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #555; /* Softer text */
+    font-size: 2.5rem;
+    color: #333;
 }
 
 #hero .btn {
-    display: inline-block;
     padding: 10px 20px;
     background-color: #ff9800;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s;
 }
 
 #hero .btn:hover {
     background-color: #e67e22;
-    transform: scale(1.05);
 }
 
 /* Section Styling */
 .section {
     padding: 50px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #ffffff, #e3f2fd); /* Smoother transition */
+    background: linear-gradient(135deg, #ffffff, #e3f2fd);
 }
 
 .section h2 {
     font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #4caf50; /* Brand secondary color */
+    color: #4caf50;
 }
 
-.section p {
-    font-size: 1rem;
-    color: #666;
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
-/* Footer */
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
 .footer {
     background: #4caf50;
     color: #fff;
     text-align: center;
     padding: 15px 10px;
-}
-
-.footer a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-.footer .social-icon {
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
-    transition: transform 0.2s;
-}
-
-.footer .social-icon:hover {
-    transform: scale(1.1);
 }
