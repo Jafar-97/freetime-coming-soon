@@ -181,6 +181,21 @@ body {
     font-weight: bold;
     color: #FFD700; /* Gold */
     margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+#about h2::after {
+    content: '';
+    display: block;
+    width: 100px; /* Length of the line */
+    height: 3px; /* Thickness of the line */
+    background-color: #FFD700; /* Gold */
+    margin: 10px auto 0; /* Spacing around the line */
+    position: relative;
+    border-radius: 3px; /* Slight rounding for a smooth look */
+}
+
 }
 
 #about p {
