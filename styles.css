@@ -12,6 +12,7 @@ body {
     color: #333;
     background: #f5f5f5;
     line-height: 1.6;
+    background-color: yellow !important;
 }
 
 /* Navigation Bar */
