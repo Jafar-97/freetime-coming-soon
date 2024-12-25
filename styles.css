@@ -5,13 +5,16 @@
     box-sizing: border-box;
 }
 
+/* Body */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1A1A2E, #0F4C75, #6A0572); /* Initial Gradient */
+    background: linear-gradient(135deg, #1A1A2E, #0F4C75, #6A0572); /* Smooth Gradient */
     background-size: 300% 300%;
-    animation: smoothGradient 10s infinite ease-in-out; /* Smooth Gradient Animation */
+    animation: smoothGradient 10s infinite ease-in-out; /* Unified Gradient Animation */
     color: #EEEEEE; /* Light Text */
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 /* Navbar */
@@ -19,16 +22,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #1A1A2E, #0F4C75, #6A0572); /* Same gradient as body */
-    background-size: 300% 300%; /* Matches the body gradient */
-    animation: smoothGradient 10s infinite ease-in-out; /* Same animation */
     padding: 15px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     position: sticky;
     top: 0;
     z-index: 1000;
+    background: transparent; /* Transparent to blend with the body */
+    animation: smoothGradient 10s infinite ease-in-out; /* Matches body animation */
 }
-
 
 .navbar .logo {
     height: 50px;
@@ -51,6 +51,20 @@ body {
 .nav-links a:hover {
     color: #FFFFFF; /* White on hover */
 }
+
+/* Smooth Gradient Transition */
+@keyframes smoothGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 /* Hero Section */
 #hero {
