@@ -152,6 +152,20 @@ body {
     background: none;
     transition: all 0.3s ease;
 }
+/* Coming Soon Section */
+#coming-soon {
+    padding: 100px 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#coming-soon h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    animation: glowingEffect 2s infinite ease-in-out;
+}
 
 .btn:hover {
     background-color: #FFFFFF;
