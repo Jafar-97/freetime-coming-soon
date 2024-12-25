@@ -296,12 +296,7 @@ p, ul li {
     color: #EEEEEE;
 }
 
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: #142850;
-    color: #EEEEEE;
-}
+
 
 #founder {
     text-align: center;
@@ -328,6 +323,13 @@ p, ul li {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #142850;
+    color: #EEEEEE;
 }
 
 
