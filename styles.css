@@ -7,7 +7,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #1A1A2E; /* Dark Navy */
+    background: linear-gradient(135deg, #1A1A2E, #0F4C75, #6A0572); /* Initial Gradient */
+    background-size: 300% 300%;
+    animation: smoothGradient 10s infinite ease-in-out; /* Smooth Gradient Animation */
     color: #EEEEEE; /* Light Text */
     line-height: 1.6;
 }
@@ -17,7 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #0F4C75, #1A1A2E); /* Teal to Navy */
+    background: rgba(0, 0, 0, 0.8); /* Transparent Navbar */
     padding: 15px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     position: sticky;
@@ -51,7 +53,6 @@ body {
 #hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(135deg, #6A0572, #0F4C75); /* Purple to Teal */
     color: #EEEEEE; /* Light Text */
 }
 
@@ -81,7 +82,7 @@ body {
     background-color: #FFC107; /* Slightly Lighter Gold */
 }
 
-/* Smooth Gradient Transition */
+/* Keyframes for Smooth Gradient Transition */
 @keyframes smoothGradient {
     0% {
         background-position: 0% 50%;
@@ -96,9 +97,6 @@ body {
 
 /* Coming Soon Section */
 #coming-soon {
-    background: linear-gradient(135deg, #1A1A2E, #0F4C75, #6A0572);
-    background-size: 300% 300%;
-    animation: smoothGradient 20s infinite ease-in-out; /* Smooth transition */
     padding: 100px 20px;
     text-align: center;
     color: #FFD700; /* Gold */
@@ -143,42 +141,100 @@ body {
     }
 }
 
-/* Smooth Gradient Transition with Faster Timing */
-@keyframes smoothGradient {
+@keyframes slideInFromBottom {
     0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
+        opacity: 0;
+        transform: translateY(50px);
     }
     100% {
-        background-position: 0% 50%;
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-#coming-soon {
-    background: linear-gradient(135deg, #1A1A2E, #0F4C75, #6A0572);
-    background-size: 300% 300%;
-    animation: smoothGradient 10s infinite ease-in-out; /* Reduced duration to 10s */
-    padding: 100px 20px;
+/* About Us Section */
+#about {
+    padding: 80px 20px;
     text-align: center;
-    color: #FFD700; /* Gold */
-    border-top: 2px solid #FFD700; /* Thin Gold Border */
-    border-bottom: 2px solid #FFD700;
+    color: #EEEEEE; /* Light Text */
 }
 
-#coming-soon h2 {
-    font-size: 4rem; /* Larger Font Size */
+#about h2 {
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 20px;
     color: #FFD700; /* Gold */
-    animation: fadeInFromTop 1.5s ease, glowingText 2s infinite ease-in-out; /* Glowing and Fade-in */
+    margin-bottom: 20px;
 }
 
-#coming-soon p {
-    font-size: 1.5rem;
+#about p {
+    font-size: 1.2rem;
     line-height: 1.8;
-    animation: slideInFromBottom 1.5s ease 0.5s; /* Delayed Slide-in */
-    opacity: 0; /* Start Hidden */
-    animation-fill-mode: forwards; /* Ensures the animation stays after completion */
+    max-width: 800px;
+    margin: 0 auto;
+    color: #CCCCCC; /* Softer White Text */
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 20px;
+    text-align: center;
+    color: #EEEEEE;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFD700; /* Gold */
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #FFD700; /* Gold Border */
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent Black */
+    color: #EEEEEE; /* Light Text */
+}
+
+.contact-form button {
+    padding: 12px 30px;
+    background: #FFD700; /* Gold Button */
+    color: #1A1A2E; /* Dark Text */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #FFC107; /* Slightly Lighter Gold */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Transparent Black */
+    color: #FFD700; /* Gold Text */
+}
+
+.footer a {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
