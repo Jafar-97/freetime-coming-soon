@@ -303,4 +303,14 @@ p, ul li {
     color: #EEEEEE;
 }
 
+#founder {
+    text-align: center;
+    padding: 40px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
 
