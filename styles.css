@@ -5,24 +5,21 @@
     box-sizing: border-box;
 }
 
-/* Global Font */
 body {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: #333;
-    background: #f5f5f5;
+    background: #121212; /* Dark gray */
+    color: #F4F4F9; /* Off-white */
     line-height: 1.6;
-    background-color: yellow !important;
 }
 
-/* Navigation Bar */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    background: #3A0CA3; /* Deep purple */
     padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .logo {
@@ -30,96 +27,109 @@ body {
 }
 
 .nav-links {
-    display: flex;
     list-style: none;
-}
-
-.nav-links li {
-    margin: 0 15px;
+    display: flex;
+    gap: 15px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
+    color: #F4F4F9; /* Off-white */
     font-weight: 500;
-    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ffeb3b;
+    color: #EE9B00; /* Golden Yellow */
 }
 
 /* Hero Section */
 #hero {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #6edc91, #f5fdfb);
-    color: #333;
+    background: linear-gradient(135deg, #0A9396, #3A0CA3); /* Dark cyan to deep purple */
+    color: #F4F4F9; /* Off-white */
 }
 
 #hero h1 {
     font-size: 2.8rem;
-    font-weight: 600;
     margin-bottom: 10px;
-    color: #222;
 }
 
 #hero p {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    color: #555;
+    color: #D9D9D9; /* Slightly dimmed off-white */
 }
 
 #hero .btn {
-    font-size: 1rem;
-    font-weight: 500;
     padding: 12px 24px;
-    background-color: #ff9800;
-    color: #fff;
+    background-color: #EE9B00; /* Golden Yellow */
+    color: #121212; /* Dark gray */
     border-radius: 6px;
+    font-size: 1rem;
     text-decoration: none;
+    font-weight: bold;
     transition: all 0.3s ease;
 }
 
 #hero .btn:hover {
-    background-color: #e67e22;
-    transform: scale(1.05);
+    background-color: #D97700; /* Slightly darker yellow */
+}
+
+/* Coming Soon Section */
+#coming-soon {
+    background: linear-gradient(135deg, #3A0CA3, #0A9396); /* Deep purple to dark cyan */
+    padding: 50px 20px;
+    text-align: center;
+    color: #F4F4F9;
+}
+
+#coming-soon h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#coming-soon p {
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 /* About Us Section */
 #about {
-    background: linear-gradient(135deg, #f5faff, #e3f7ff);
+    background: #1E1E1E; /* Slightly lighter dark gray */
     padding: 50px 20px;
     text-align: center;
 }
 
 #about h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
+    color: #EE9B00; /* Golden Yellow */
     margin-bottom: 15px;
-    color: #4caf50;
 }
 
 #about p {
     font-size: 1rem;
     line-height: 1.8;
-    color: #555;
+    color: #D9D9D9; /* Slightly dimmed off-white */
     max-width: 800px;
     margin: 0 auto;
 }
 
 /* Contact Section */
 #contact {
-    background: #ffffff;
+    background: #121212; /* Dark gray */
     padding: 50px 20px;
     text-align: center;
 }
 
 #contact h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
+    color: #EE9B00; /* Golden Yellow */
     margin-bottom: 15px;
-    color: #4caf50;
 }
 
 .contact-form {
@@ -133,15 +143,17 @@ body {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #3A0CA3; /* Deep purple border */
     border-radius: 5px;
     font-size: 1rem;
+    background: #1E1E1E; /* Slightly lighter dark gray */
+    color: #F4F4F9;
 }
 
 .contact-form button {
     padding: 12px 20px;
-    background-color: #4caf50;
-    color: #fff;
+    background: #0A9396; /* Dark cyan */
+    color: #F4F4F9;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -150,47 +162,23 @@ body {
 }
 
 .contact-form button:hover {
-    background-color: #388e3c;
+    background: #086F68; /* Slightly darker cyan */
 }
 
 /* Footer */
 .footer {
-    background-color: #4caf50;
-    color: #fff;
     text-align: center;
-    padding: 20px 10px;
+    padding: 10px;
+    background: #3A0CA3; /* Deep purple */
+    color: #F4F4F9;
 }
 
 .footer a {
-    color: #fff;
+    color: #EE9B00; /* Golden Yellow */
     font-weight: bold;
     text-decoration: none;
 }
 
 .footer a:hover {
     text-decoration: underline;
-}
-
-/* Coming Soon Section */
-#coming-soon {
-    background: linear-gradient(135deg, #fceabb, #f8b500); /* Warm gradient */
-    padding: 50px 20px;
-    text-align: center;
-    color: #333;
-    border-top: 2px solid #ff9800; /* Subtle border */
-    border-bottom: 2px solid #ff9800;
-}
-
-#coming-soon h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #222; /* Strong text color */
-    margin-bottom: 15px;
-}
-
-#coming-soon p {
-    font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 1.6;
-    color: #333;
 }
