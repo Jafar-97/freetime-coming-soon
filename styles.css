@@ -269,6 +269,14 @@ body {
     text-decoration: underline;
 }
 
+footer .social-icon {
+    width: 40px; /* Adjust the width to your preference */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px auto; /* Center the logo */
+    display: block; /* Ensure it's on its own line */
+}
+
+
 .circular-photo {
     width: 200px;
     height: 200px;
