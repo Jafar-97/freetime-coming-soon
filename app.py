@@ -1,44 +1,43 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request
 from flask_mail import Mail, Message
 
 app = Flask(__name__)
 
-# Flask-Mail configuration
+# Configure Flask-Mail
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'cocclasher619619@gmail.com'  # Replace with your email
-app.config['MAIL_PASSWORD'] = 'Freetimeventures619'        # Replace with your email password
-app.config['MAIL_DEFAULT_SENDER'] = 'cocclasher619619@gmail.com'  # Replace with your email
+app.config['MAIL_USERNAME'] = 'your_email@gmail.com'  # Replace with your email
+app.config['MAIL_PASSWORD'] = 'your_email_password'  # Replace with your email password
+
 mail = Mail(app)
 
+# Route for the homepage
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('index.html')  # Ensure 'index.html' is in the 'templates' folder
 
-@app.route('/send_message', methods=['POST'])
-def send_message():
-    name = request.form['name']
-    email = request.form['email']
-    message_content = request.form['message']
-    
-    # Compose the email
-    msg = Message(subject="New Message from Contact Form",
-                  sender=email,
-                  recipients=['mdjafarrko@@gmail.com'])  # Replace with owner's email
-    msg.body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message_content}"
-    
+# Route for handling the contact form submission
+@app.route('/submit', methods=['POST'])
+def submit():
     try:
-        mail.send(msg)
-        flash("Message sent successfully!", "success")
-    except Exception as e:
-    flash("Failed to send message. Please try again later.", "danger")
-    app.logger.error(f"Error sending email: {e}")
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
 
-    
-    return redirect(url_for('index'))
+        # Compose email
+        msg = Message(
+            subject=f"New Message from {name}",
+            sender=email,
+            recipients=['mdjafarrko@gmail.com']  # Replace with the owner's email
+        )
+        msg.body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
+
+        # Send email
+        mail.send(msg)
+        return "Message sent successfully!", 200
+    except Exception as e:
+        return f"An error occurred: {str(e)}", 500
 
 if __name__ == '__main__':
-    app.secret_key = 'your_secret_key'  # Replace with a secure key
-    app.run(debug=True, host='0.0.0.0')
-
+    app.run(debug=True)
