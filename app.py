@@ -1,37 +1,41 @@
-from flask import Flask, request, render_template
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_mail import Mail, Message
 
 app = Flask(__name__)
 
 # Flask-Mail configuration
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Replace with your mail server
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'your-email@gmail.com'  # Your email
-app.config['MAIL_PASSWORD'] = 'your-email-password'  # Your email password
-
+app.config['MAIL_USERNAME'] = 'your_email@gmail.com'  # Replace with your email
+app.config['MAIL_PASSWORD'] = 'your_password'        # Replace with your email password
+app.config['MAIL_DEFAULT_SENDER'] = 'your_email@gmail.com'  # Replace with your email
 mail = Mail(app)
 
-@app.route("/contact", methods=["POST"])
-def contact():
-    name = request.form.get("name")
-    email = request.form.get("email")
-    message = request.form.get("message")
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-    # Create email content
-    msg = Message(
-        subject="New Contact Form Submission",
-        sender=email,
-        recipients=["mdjafarrko@gmail.com"],  
-        body=f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
-    )
-
-    # Send email
+@app.route('/send_message', methods=['POST'])
+def send_message():
+    name = request.form['name']
+    email = request.form['email']
+    message_content = request.form['message']
+    
+    # Compose the email
+    msg = Message(subject="New Message from Contact Form",
+                  sender=email,
+                  recipients=['owner_email@gmail.com'])  # Replace with owner's email
+    msg.body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message_content}"
+    
     try:
         mail.send(msg)
-        return "Message sent successfully!"
+        flash("Message sent successfully!", "success")
     except Exception as e:
-        return f"Failed to send message. Error: {str(e)}"
+        flash(f"Failed to send message: {e}", "danger")
+    
+    return redirect(url_for('index'))
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    app.secret_key = 'your_secret_key'  # Replace with a secure key
     app.run(debug=True)
