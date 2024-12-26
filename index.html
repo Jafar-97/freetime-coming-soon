@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet the Founder - Free Time Ventures</title>
+    <title>Free Time Ventures</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,9 +14,9 @@
         <nav class="navbar">
             <img src="logo.png" alt="Company Logo" class="logo">
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="founder.html" class="active">Meet the Founder</a></li>
+                <li><a href="founder.html">Meet the Founder</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#product-showcase">Our Products</a></li>
             </ul>
@@ -29,23 +29,59 @@
     </header>
 
     <main>
-        <!-- Meet the Founder Section -->
-        <section id="founder" class="section">
-            <h1>Meet the Founder</h1>
-            <div class="founder-info">
-                <img src="founder.jpg" alt="Founder Image" class="founder-img">
-                <div class="founder-details">
-                    <p>
-                        <strong>Name:</strong> John Doe
-                    </p>
-                    <p>
-                        <strong>Bio:</strong> John Doe is the visionary founder of Free Time Ventures. With a passion for innovation and technology, John has been instrumental in driving the company’s mission to enhance health and productivity.
-                    </p>
-                    <p>
-                        <strong>Mission:</strong> To empower individuals and businesses through innovative technology solutions, enabling a better and more productive future.
-                    </p>
-                </div>
-            </div>
+        <!-- Hero Section -->
+        <section id="hero">
+            <h1>Welcome to Free Time Ventures</h1>
+            <p>Unlocking value in health and productivity.</p>
+            <a href="https://www.linkedin.com/company/freetimeventures/jobs/" target="_blank" class="btn">Follow us on LinkedIn</a>
+        </section>
+
+        <!-- Coming Soon Section -->
+        <section id="coming-soon" class="section">
+            <h2>Coming Soon</h2>
+            <p>Stay tuned for exciting updates and features.</p>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>
+                At Free Time Ventures, we are committed to building cutting-edge technology solutions that enhance health, productivity, and overall well-being. Our mission is to foster innovation and empower individuals and businesses by creating impactful tools and platforms.
+            </p>
+            <p>
+                We actively collaborate with talented engineers to ideate, design, and launch transformative technology businesses. Our approach is grounded in mentorship, enabling the next generation of entrepreneurs to thrive in the tech space.
+            </p>
+            <p>
+                Through our go-to-market strategies, we ensure seamless product distribution and marketing efforts, maximizing the reach and impact of our solutions. By combining creativity, strategy, and execution, Free Time Ventures is unlocking value and paving the way for a healthier, more productive future.
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <form action="https://formspree.io/f/xblldbeb" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+
+        <!-- Email Signup Section -->
+        <section id="email-signup" class="section">
+            <h2>Stay Updated</h2>
+            <p>Sign up to receive updates about our latest products and features.</p>
+            <form id="signup-form" class="signup-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Our Products Section -->
+        <section id="product-showcase" class="section">
+            <h2 style="color: white; font-weight: bold; font-size: 2.5rem;">Our Products</h2>
+            <p>We’re working on something amazing!</p>
+            <p>Stay tuned for more updates.</p>
         </section>
     </main>
 
