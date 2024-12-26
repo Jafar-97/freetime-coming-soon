@@ -32,7 +32,9 @@ def send_message():
         mail.send(msg)
         flash("Message sent successfully!", "success")
     except Exception as e:
-        flash(f"Failed to send message: {e}", "danger")
+    flash("Failed to send message. Please try again later.", "danger")
+    app.logger.error(f"Error sending email: {e}")
+
     
     return redirect(url_for('index'))
 
