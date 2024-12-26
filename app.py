@@ -22,7 +22,7 @@ def contact():
     msg = Message(
         subject="New Contact Form Submission",
         sender=email,
-        recipients=["owner@example.com"],  # Replace with the owner's email
+        recipients=["mdjafarrko@gmail.com"],  
         body=f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
     )
 
