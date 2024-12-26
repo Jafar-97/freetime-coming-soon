@@ -38,4 +38,5 @@ def send_message():
 
 if __name__ == '__main__':
     app.secret_key = 'your_secret_key'  # Replace with a secure key
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
+
