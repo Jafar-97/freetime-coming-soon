@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meet the Founder</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="icon" href="static/logo.png" type="image/png">
     <style>
+        .founder-section {
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+        }
+
         .founder-image {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             margin: 20px auto;
             display: block;
+            border: 5px solid #ffd700; /* Golden border */
         }
 
         .founder-name {
-            text-align: center;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: bold;
             color: white;
             text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700, 0 0 20px #ffc107;
         }
 
-        .founder-info {
-            text-align: center;
-            color: #dcdcdc;
+        .founder-bio {
             max-width: 600px;
-            margin: 0 auto;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #dcdcdc;
         }
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <img src="logo.png" alt="Company Logo" class="logo">
+            <img src="static/logo.png" alt="Company Logo" class="logo">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About Us</a></li>
@@ -43,31 +49,25 @@
                 <li><a href="index.html#contact">Contact</a></li>
                 <li><a href="index.html#product-showcase">Our Products</a></li>
             </ul>
-            <button id="darkModeToggle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="crescent-icon">
-                    <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"></path>
-                </svg>
-            </button>
         </nav>
     </header>
 
     <main>
-        <section id="meet-founder" class="section">
+        <section class="founder-section">
+            <img src="static/founder.jpg" alt="Founder Image" class="founder-image">
             <h2 class="founder-name">Mohammad Shabaz Moosa</h2>
-            <img src="founder.jpg" alt="Founder Image" class="founder-image">
-            <div class="founder-info">
-                <p><strong>Bio:</strong> Mohammad Shabaz Moosa is the visionary founder of Free Time Ventures. With a passion for innovation and technology, he has been instrumental in driving the company's mission to enhance health and productivity.</p>
-                <p><strong>Mission:</strong> To empower individuals and businesses through innovative technology solutions, enabling a better and more productive future.</p>
-            </div>
+            <p class="founder-bio">
+                Mohammad Shabaz Moosa is the visionary founder of Free Time Ventures. With a passion for innovation and technology, he has been instrumental in driving the company's mission to enhance health and productivity.
+                <br><br>
+                His mission is to empower individuals and businesses through innovative technology solutions, enabling a better and more productive future.
+            </p>
         </section>
     </main>
-
-    <link rel="stylesheet" href="styles.css">
 
     <footer class="footer">
         <p>&copy; 2024 Free Time Ventures. All rights reserved.</p>
         <a href="https://www.linkedin.com/company/freetimeventures/posts/?feedView=all" target="_blank">
-            <img src="linkedin-logo.png" alt="LinkedIn Logo" class="social-icon">
+            <img src="static/linkedin-logo.png" alt="LinkedIn Logo" class="social-icon">
         </a>
     </footer>
 </body>
