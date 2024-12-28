@@ -74,6 +74,8 @@ body {
     cursor: pointer;
     background: none;
     transition: all 0.3s ease;
+    margin: 20px auto;
+    display: inline-block;
 }
 
 .btn:hover {
@@ -160,6 +162,47 @@ footer .social-icon:hover {
     transform: scale(1.1);
 }
 
+/* Contact Section */
+#contact {
+    padding: 80px 20px;
+    text-align: center;
+    color: #FFFFFF;
+    border-top: 1px solid #333333; /* Subtle Border */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent White */
+    color: #FFFFFF;
+}
+
+.contact-form button {
+    padding: 12px 30px;
+    background: #FFFFFF; /* White Button */
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #CCCCCC; /* Softer White */
+}
+
 /* Smooth Transition for the Whole Website */
 body {
     animation: fadeInBody 1.2s ease-in-out; /* Fade-in effect for body */
@@ -172,23 +215,4 @@ body {
     100% {
         opacity: 1;
     }
-}
-
-/* Founder Page Adjustments */
-#meet-founder {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#meet-founder h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #FFD700;
-    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700;
-}
-
-#meet-founder p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #CCCCCC;
 }
