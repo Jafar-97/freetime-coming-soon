@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     animation: fadeInBody 1.2s ease-in-out; /* Smooth fade-in */
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 /* Navbar */
@@ -53,7 +54,11 @@ body {
 /* Hero Section */
 #hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 50px 20px; /* Adjusted padding */
+    height: 80vh; /* Take most of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #hero h1 {
@@ -86,13 +91,13 @@ body {
 /* Coming Soon Section */
 #coming-soon {
     text-align: center;
-    padding: 100px 20px;
+    padding: 50px 20px;
     color: #FFFFFF;
     display: flex;
-    flex-direction: column; /* Align vertically */
-    justify-content: center; /* Center-align content */
-    align-items: center; /* Center-align content */
-    height: 100vh; /* Full viewport height */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Adjust height to bring content upwards */
 }
 
 #coming-soon h2 {
@@ -103,6 +108,7 @@ body {
     animation: glowingEffect 2s infinite ease-in-out;
 }
 
+/* Keyframes for glowing text effect */
 @keyframes glowingEffect {
     0%, 100% {
         text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
@@ -216,6 +222,7 @@ footer .social-icon:hover {
 /* Smooth Transition for the Whole Website */
 body {
     animation: fadeInBody 1.2s ease-in-out; /* Fade-in effect for body */
+    scroll-behavior: smooth;
 }
 
 @keyframes fadeInBody {
