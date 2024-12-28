@@ -7,20 +7,19 @@
 
 /* General Theme */
 body {
-    background-color: #000000; /* Black Background */
-    color: #FFFFFF; /* White Text */
+    background-color: #000000;
+    color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    animation: fadeInBody 1.2s ease-in-out; /* Smooth fade-in */
-    scroll-behavior: smooth; /* Smooth scrolling */
+    animation: fadeInBody 1.2s ease-in-out;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #000000; /* Match Body Background */
+    background-color: #000000;
     color: #FFFFFF;
-    border-bottom: 1px solid #333333; /* Subtle Border */
+    border-bottom: 1px solid #333333;
     padding: 10px 20px;
     position: sticky;
     top: 0;
@@ -48,27 +47,28 @@ body {
 }
 
 .navbar .nav-links li a:hover {
-    color: #CCCCCC; /* Softer White */
+    color: #CCCCCC;
 }
 
 /* Hero Section */
 #hero {
     text-align: center;
-    padding: 50px 20px; /* Adjusted padding */
-    height: 80vh; /* Take most of the viewport height */
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+    height: 50vh; /* Adjust height */
 }
 
 #hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Adjust font size */
     margin-bottom: 20px;
 }
 
 #hero p {
     font-size: 1.2rem;
-    color: #CCCCCC; /* Softer White Text */
+    color: #CCCCCC;
 }
 
 .btn {
@@ -91,24 +91,19 @@ body {
 /* Coming Soon Section */
 #coming-soon {
     text-align: center;
-    padding: 50px 20px;
+    padding: 20px;
     color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90vh; /* Adjust height to bring content upwards */
+    margin: 0 auto;
 }
 
 #coming-soon h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
     animation: glowingEffect 2s infinite ease-in-out;
 }
 
-/* Keyframes for glowing text effect */
 @keyframes glowingEffect {
     0%, 100% {
         text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
@@ -257,11 +252,58 @@ body {
 }
 
 /* Stay Updated Section */
+/* Stay Updated Section */
 #email-signup {
-    padding: 60px 20px;
-    text-align: center; /* Center-align text */
+    padding: 20px;
+    text-align: center;
     color: #FFFFFF;
     margin: 0 auto;
+}
+
+#email-signup h2 {
+    font-size: 2rem; /* Increased font size */
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+#email-signup p {
+    font-size: 1rem;
+    color: #CCCCCC;
+}
+
+.signup-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.signup-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+/* Smooth Transition */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #000000;
+    color: #FFFFFF;
 }
 
 /* Our Products Section */
