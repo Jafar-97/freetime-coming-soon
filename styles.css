@@ -112,6 +112,13 @@ body {
         text-shadow: 0 0 20px #FFC107, 0 0 40px #FFC107, 0 0 60px #FFC107;
     }
 }
+/* Section Titles */
+.section h2 {
+    font-size: 2.5rem; /* Unified size for all section titles */
+    font-weight: bold;
+    margin-bottom: 30px; /* Adjusted gap */
+    text-align: center;
+}
 
 /* Founder Page */
 .founder-image {
@@ -183,7 +190,7 @@ footer .social-icon:hover {
 
 .contact-form {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: left;
 }
 
