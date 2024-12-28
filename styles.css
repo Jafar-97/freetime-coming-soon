@@ -17,26 +17,28 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #000000;
+    background-color: #000000; /* Match Body Background */
     color: #FFFFFF;
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid #333333; /* Subtle Border */
     padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between logo and links */
     align-items: center;
 }
 
 .navbar .logo {
     height: 50px;
+    margin-right: auto; /* Align logo to the left */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin: 0 auto; /* Center the links */
 }
 
 .navbar .nav-links li a {
