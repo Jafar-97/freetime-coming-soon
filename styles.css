@@ -84,13 +84,23 @@ body {
 }
 
 /* Coming Soon Section */
+#coming-soon {
+    text-align: center;
+    padding: 100px 20px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* Align vertically */
+    justify-content: center; /* Center-align content */
+    align-items: center; /* Center-align content */
+    height: 100vh; /* Full viewport height */
+}
+
 #coming-soon h2 {
-    font-size: 4rem; /* Adjust as needed */
+    font-size: 4rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #000000;
-    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700; /* Initial Glow */
-    animation: glowingEffect 2s infinite ease-in-out; /* Repeating Glow */
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    animation: glowingEffect 2s infinite ease-in-out;
 }
 
 @keyframes glowingEffect {
@@ -215,4 +225,42 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+/* Center Alignment for Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center; /* Center-align text */
+    margin: 0 auto; /* Center-align the section */
+}
+
+/* About Us Section */
+#about {
+    padding: 80px 20px;
+    text-align: center; /* Center-align text */
+    color: #FFFFFF;
+    max-width: 800px; /* Limit width for readability */
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Stay Updated Section */
+#email-signup {
+    padding: 60px 20px;
+    text-align: center; /* Center-align text */
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+
+/* Our Products Section */
+#products {
+    padding: 80px 20px;
+    text-align: center; /* Center-align text */
+    color: #FFFFFF;
+    margin: 0 auto;
 }
