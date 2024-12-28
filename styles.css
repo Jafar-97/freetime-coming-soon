@@ -14,119 +14,6 @@ body {
     padding: 0;
     animation: fadeInBody 1.2s ease-in-out; /* Smooth fade-in */
 }
-/* Navbar */
-.navbar {
-    background-color: #000000; /* Black background */
-    color: #FFFFFF; /* White text */
-    display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Space between logo and nav links */
-    padding: 10px 20px; /* Add some padding */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar .logo {
-    height: 50px;
-    margin-right: 20px; /* Add space between logo and links */
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* Space between links */
-    align-items: center; /* Align links vertically */
-    margin: 0;
-}
-
-.navbar .nav-links li {
-    display: inline-block;
-}
-
-.navbar .nav-links li a {
-    color: #FFFFFF; /* White text */
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-}
-
-.navbar .nav-links li a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-#darkModeToggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-}
-
-.crescent-icon {
-    width: 24px;
-    height: 24px;
-    color: #FFFFFF; /* White color */
-    transition: transform 0.3s ease;
-}
-
-#darkModeToggle:hover .crescent-icon {
-    transform: scale(1.2); /* Slight zoom effect on hover */
-}
-
-
-/* Hero Section */
-#hero {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-#hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-#hero p {
-    font-size: 1.2rem;
-    color: #CCCCCC; /* Softer White Text */
-    margin-bottom: 20px; /* Add space below this text */
-}
-
-.btn {
-    color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    cursor: pointer;
-    background: none;
-    transition: all 0.3s ease;
-    margin-top: 20px; /* Add space above the button */
-}
-
-.btn:hover {
-    background-color: #FFFFFF;
-    color: #000000;
-}
-
-/* Sections */
-.section {
-    padding: 60px 20px;
-}
-
-.section h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #1a1a1a; /* Matte black */
-}
-
-.section p {
-    text-align: center;
-    color: #333333; /* Softer black */
-    line-height: 1.8;
-}
 
 /* Navbar */
 .navbar {
@@ -137,6 +24,9 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar .logo {
@@ -185,109 +75,56 @@ body {
     background: none;
     transition: all 0.3s ease;
 }
-/* Coming Soon Section */
-#coming-soon {
-    padding: 100px 20px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-#coming-soon h2 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
-    animation: glowingEffect 2s infinite ease-in-out;
-}
 
 .btn:hover {
     background-color: #FFFFFF;
     color: #000000;
 }
-@keyframes glowingEffect {
-    0%, 100% {
-        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
-    }
-    50% {
-        text-shadow: 0 0 20px #FFC107, 0 0 40px #FFC107, 0 0 60px #FFC107;
-    }
-}
 
-@keyframes glowingEffect {
-    0%, 100% {
-        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
-    }
-    50% {
-        text-shadow: 0 0 20px #FFC107, 0 0 40px #FFC107, 0 0 60px #FFC107;
-    }
-}
-
-/* About Us Section */
-#about {
-    padding: 80px 20px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-#about h2 {
-    font-size: 2.5rem;
+/* Coming Soon Section */
+#coming-soon h2 {
+    font-size: 4rem; /* Adjust as needed */
     font-weight: bold;
-    color: #FFFFFF;
     margin-bottom: 20px;
-}
-
-#about p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #CCCCCC; /* Softer White */
-}
-/* Contact Section */
-#contact {
-    padding: 80px 20px;
-    text-align: center;
-    color: #FFFFFF;
-    border-top: 1px solid #333333; /* Subtle Border */
-}
-
-#contact h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #FFFFFF;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #FFFFFF;
-    border-radius: 5px;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent White */
-    color: #FFFFFF;
-}
-
-.contact-form button {
-    padding: 12px 30px;
-    background: #FFFFFF; /* White Button */
     color: #000000;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700; /* Initial Glow */
+    animation: glowingEffect 2s infinite ease-in-out; /* Repeating Glow */
 }
 
-.contact-form button:hover {
-    background: #CCCCCC; /* Softer White */
+@keyframes glowingEffect {
+    0%, 100% {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    }
+    50% {
+        text-shadow: 0 0 20px #FFC107, 0 0 40px #FFC107, 0 0 60px #FFC107;
+    }
+}
+
+/* Founder Page */
+.founder-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    border: 5px solid #FFD700;
+}
+
+.founder-name {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700, 0 0 20px #FFC107;
+}
+
+.founder-info {
+    text-align: center;
+    color: #DCDCDC;
+    font-family: 'Poppins', sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.6;
 }
 
 /* Footer */
@@ -296,6 +133,9 @@ body {
     padding: 20px;
     background: #000000;
     color: #FFFFFF;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer a {
@@ -319,36 +159,6 @@ footer .social-icon {
 footer .social-icon:hover {
     transform: scale(1.1);
 }
-/* General Smooth Fade-in Effect for All Sections */
-.section {
-    opacity: 0; /* Start Hidden */
-    transform: translateY(50px); /* Start Slightly Below */
-    transition: all 0.6s ease-in-out;
-}
-
-.section.show {
-    opacity: 1; /* Fully Visible */
-    transform: translateY(0); /* Reset Position */
-}
-
-/* Glowing Effect for Coming Soon */
-#coming-soon h2 {
-    font-size: 4rem; /* Adjust as needed */
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #000000;
-    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700; /* Initial Glow */
-    animation: glowingEffect 2s infinite ease-in-out; /* Repeating Glow */
-}
-
-@keyframes glowingEffect {
-    0%, 100% {
-        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
-    }
-    50% {
-        text-shadow: 0 0 20px #FFC107, 0 0 40px #FFC107, 0 0 60px #FFC107;
-    }
-}
 
 /* Smooth Transition for the Whole Website */
 body {
@@ -364,84 +174,21 @@ body {
     }
 }
 
-/* Fade-in Animation */
-@keyframes fadeInBody {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-/* Our Products Section */
-#products {
-    padding: 80px 20px;
+/* Founder Page Adjustments */
+#meet-founder {
+    padding: 60px 20px;
     text-align: center;
-    color: #FFFFFF; /* White text */
-    background-color: #000000; /* Black background */
 }
 
-#products h2 {
+#meet-founder h2 {
     font-size: 2.5rem;
-    font-weight: bold;
     margin-bottom: 20px;
-    color: #FFFFFF; /* White text */
+    color: #FFD700;
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700;
 }
 
-#products p {
+#meet-founder p {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #CCCCCC; /* Softer white text */
-    margin-top: 10px;
+    color: #CCCCCC;
 }
-
-/* Email Signup Section */
-#email-signup {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #000000; /* Black background for consistency */
-    color: #FFFFFF; /* White text */
-}
-
-#email-signup h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #FFFFFF;
-}
-
-#email-signup p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #CCCCCC; /* Slightly lighter text for readability */
-}
-
-.signup-form {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.signup-form input {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #CCCCCC;
-    border-radius: 5px;
-    width: 250px;
-}
-
-.signup-form button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #FFFFFF;
-    color: #000000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.signup-form button:hover {
-    background-color: #333333;
-    color: #FFFFFF;
-}
-
