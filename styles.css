@@ -197,6 +197,16 @@ body {
     line-height: 1.6;
 }
 
+.founder-info p {
+    margin-bottom: 20px; /* Add spacing after each paragraph */
+    line-height: 1.6; /* Adjust for better readability */
+}
+
+.founder-info p:last-of-type {
+    margin-bottom: 0; /* Remove extra space after the last paragraph */
+}
+
+
 /* Footer */
 .footer {
     text-align: center;
@@ -284,6 +294,8 @@ body {
     animation: fadeInBody 1.2s ease-in-out; /* Fade-in effect for body */
     scroll-behavior: smooth;
 }
+
+
 
 @keyframes fadeInBody {
     0% {
