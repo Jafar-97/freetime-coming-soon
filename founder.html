@@ -4,44 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meet the Founder</title>
-    <link rel="stylesheet" href="static/styles.css">
-    <link rel="icon" href="static/logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        .founder-section {
-            text-align: center;
-            padding: 50px 20px;
-            color: white;
-        }
-
         .founder-image {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             margin: 20px auto;
             display: block;
-            border: 5px solid #ffd700; /* Golden border */
+            border: 5px solid #ffd700;
         }
 
         .founder-name {
-            font-size: 2rem;
+            text-align: center;
+            font-size: 1.5rem;
             font-weight: bold;
-            color: white;
+            color: #ffd700;
             text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700, 0 0 20px #ffc107;
         }
 
-        .founder-bio {
-            max-width: 600px;
-            margin: 20px auto;
-            font-size: 1.2rem;
-            line-height: 1.8;
+        .founder-info {
+            text-align: center;
             color: #dcdcdc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        body {
+            background-color: #000; /* Black background */
+            color: #fff;
         }
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <img src="static/logo.png" alt="Company Logo" class="logo">
+            <img src="logo.png" alt="Company Logo" class="logo">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About Us</a></li>
@@ -53,21 +51,20 @@
     </header>
 
     <main>
-        <section class="founder-section">
-            <img src="static/founder.jpg" alt="Founder Image" class="founder-image">
+        <section id="meet-founder" class="section">
             <h2 class="founder-name">Mohammad Shabaz Moosa</h2>
-            <p class="founder-bio">
-                Mohammad Shabaz Moosa is the visionary founder of Free Time Ventures. With a passion for innovation and technology, he has been instrumental in driving the company's mission to enhance health and productivity.
-                <br><br>
-                His mission is to empower individuals and businesses through innovative technology solutions, enabling a better and more productive future.
-            </p>
+            <img src="founder.jpg" alt="Founder Image" class="founder-image">
+            <div class="founder-info">
+                <p><strong>Bio:</strong> Mohammad Shabaz Moosa is the visionary founder of Free Time Ventures. With a passion for innovation and technology, he has been instrumental in driving the company's mission to enhance health and productivity.</p>
+                <p><strong>Mission:</strong> To empower individuals and businesses through innovative technology solutions, enabling a better and more productive future.</p>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
         <p>&copy; 2024 Free Time Ventures. All rights reserved.</p>
         <a href="https://www.linkedin.com/company/freetimeventures/posts/?feedView=all" target="_blank">
-            <img src="static/linkedin-logo.png" alt="LinkedIn Logo" class="social-icon">
+            <img src="linkedin-logo.png" alt="LinkedIn Logo" class="social-icon">
         </a>
     </footer>
 </body>
