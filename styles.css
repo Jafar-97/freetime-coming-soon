@@ -99,7 +99,8 @@ body {
 #coming-soon h2 {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
     text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
     animation: glowingEffect 2s infinite ease-in-out;
 }
@@ -120,7 +121,7 @@ body {
     text-align: center;
 }
 
-/* Founder Page */
+/* Founder Image */
 .founder-image {
     width: 200px;
     height: 200px;
@@ -128,15 +129,21 @@ body {
     margin: 20px auto;
     display: block;
     border: 5px solid #FFD700;
+    box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    animation: glowingEffect 2s infinite ease-in-out;
 }
 
+/* Founder Name */
 .founder-name {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    color: #FFD700;
-    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700, 0 0 20px #FFC107;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    animation: glowingEffect 2s infinite ease-in-out;
 }
+
+
 
 .founder-info {
     text-align: center;
@@ -258,7 +265,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Stay Updated Section */
+
 /* Stay Updated Section */
 #email-signup {
     padding: 20px;
