@@ -255,10 +255,6 @@ body {
     justify-content: center; /* Centers the navbar content horizontally */
 }
 
-.founder-page .navbar .logo {
-    margin-right: 20px; /* Keeps the logo slightly separated */
-}
-
 .founder-page .nav-links {
     gap: 30px; /* Adjust spacing between links */
 }
