@@ -7,7 +7,30 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <script src="scripts.js" defer></script>
+    <style>
+        .founder-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .founder-name {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700, 0 0 20px #ffc107;
+        }
+
+        .founder-info {
+            text-align: center;
+            color: #dcdcdc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,11 +53,12 @@
 
     <main>
         <section id="meet-founder" class="section">
-            <h2>Meet the Founder</h2>
+            <h2 class="founder-name">Mohammad Shabaz Moosa</h2>
             <img src="founder.jpg" alt="Founder Image" class="founder-image">
-            <p><strong>Name:</strong> John Doe</p>
-            <p><strong>Bio:</strong> John Doe is the visionary founder of Free Time Ventures. With a passion for innovation and technology, John has been instrumental in driving the company's mission to enhance health and productivity.</p>
-            <p><strong>Mission:</strong> To empower individuals and businesses through innovative technology solutions, enabling a better and more productive future.</p>
+            <div class="founder-info">
+                <p><strong>Bio:</strong> Mohammad Shabaz Moosa is the visionary founder of Free Time Ventures. With a passion for innovation and technology, he has been instrumental in driving the company's mission to enhance health and productivity.</p>
+                <p><strong>Mission:</strong> To empower individuals and businesses through innovative technology solutions, enabling a better and more productive future.</p>
+            </div>
         </section>
     </main>
 
