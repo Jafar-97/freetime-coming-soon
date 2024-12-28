@@ -380,3 +380,19 @@ html {
     color: #FFFFFF;
     margin: 0 auto;
 }
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust spacing between icons */
+}
+
+.social-icon {
+    width: 40px; /* Adjust size */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
